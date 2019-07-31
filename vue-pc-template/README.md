@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-![demo vue](https://github.com/lanzhsh/vue-pc-template/blob/master/images/vue-pc-template.png)
+![demo vue](https://github.com/lanzhsh/react-vue-koa/blob/master/vue-pc-template/images/vue-pc-template.png)
 
 ``` bash
 # install dependencies

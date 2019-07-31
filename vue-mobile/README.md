@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-![min-program-demo](https://github.com/lanzhsh/vue-mobile/blob/master/src/assets/img/project.jpg)
+![vue-mobile](https://github.com/lanzhsh/react-vue-koa/blob/master/vue-mobile/src/assets/img/project.jpg)
 
 ## Build Setup
 

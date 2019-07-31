@@ -1,6 +1,6 @@
 > A min-program project
 
-![min-program-demo](https://github.com/lanzhsh/mini-program-demo/blob/master/images/wx-image.jpg)
+![min-program-demo](https://github.com/lanzhsh/react-vue-koa/blob/master/mini-program-demo/images/wx-image.jpg)
 
 #instructions
 

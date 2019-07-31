@@ -9,7 +9,7 @@
 
 ## Build Setup
 
-![demo vue](https://github.com/lanzhsh/vue-demo/blob/master/images/vue-demo.png)
+![demo vue](https://github.com/lanzhsh/react-vue-koa/blob/master/vue-demo/images/vue-demo.png)
 
 ``` bash
 # install dependencies

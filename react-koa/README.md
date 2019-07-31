@@ -5,9 +5,9 @@ react-template (前端项目)
 ```
 
 ## 预览图
-![react-koa-login](https://github.com/lanzhsh/react-koa/blob/master/img/react-koa-login.png)
+![react-koa-login](https://github.com/lanzhsh/react-vue-koa/blob/master/react-koa/img/react-koa-login.png)
 
-![react-koa-detail](https://github.com/lanzhsh/react-koa/blob/master/img/react-koa-detail.png)
+![react-koa-detail](https://github.com/lanzhsh/react-vue-koa/blob/master/react-koa/img/react-koa-detail.png)
 
 ## 技术栈
 ```

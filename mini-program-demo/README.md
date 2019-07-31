@@ -1,6 +1,6 @@
 > A weui-lan project
 
-![weui-lan](https://github.com/lanzhsh/weui-lan/blob/master/images/weui-lan.jpg)
+![weui-lan](https://github.com/lanzhsh/react-vue-koa/blob/master/weui-lan/images/weui-lan.jpg)
 
 ## instructions 
 

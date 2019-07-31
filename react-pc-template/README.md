@@ -3,7 +3,7 @@
 
 ## Build Setup
 
-![react-pc-template](https://github.com/lanzhsh/react-pc-template/blob/master/assets/react-pc-template.png)
+![react-pc-template](https://github.com/lanzhsh/react-vue-koa/blob/master/react-pc-template/assets/react-pc-template.png)
 
 ``` bash
 # install dependencies

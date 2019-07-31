@@ -2,7 +2,7 @@
 
 > A react.js project
 
-![react-mobile](https://github.com/lanzhsh/react-mobile/blob/master/src/assets/react-mobile.png)
+![react-mobile](https://github.com/lanzhsh/react-vue-koa/blob/master/react-mobile/src/assets/react-mobile.png)
 
 ## star
 是一个初学者上手项目的不错demo 持续更新中
