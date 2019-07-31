@@ -113,5 +113,18 @@
   17. Vue 2 Snippets
 
 
+#### Git Moji 提交
+1. 修复 bug :bug:
+2. 代码优化 :art:
+3. 移除操作 :fire:
+4. 觉得写得不错的提交 :sparkles:
+5. UI 修改 :lipstick:
+6. 修改配置 :wrench:
+7. 移动重命名文件 :truck:
+8. 新代码或一般修改 :pencil:
+
+
+
+
 
 
