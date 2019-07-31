@@ -1,6 +1,6 @@
 # vue-ts-demo
 
-![vue-ts-template](https://github.com/lanzhsh/vue-ts-template/blob/master/static/vue-ts-template.png)
+![vue-ts-template](https://github.com/lanzhsh/react-vue-koa/blob/master/vue-ts-template/static/vue-ts-template.png)
 
 
 ## star
