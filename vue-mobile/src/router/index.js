@@ -1,9 +1,8 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '@/pages/home/home';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/pages/home/home'
 
-
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -13,7 +12,7 @@ export default new Router({
       name: 'Home',
       component: Home,
 
-      children:[
+      children: [
         {
           path: '/main',
           name: 'Main',
@@ -38,13 +37,13 @@ export default new Router({
           path: '/my',
           name: 'My',
           component: () => import('@/pages/my/my.vue')
-        },
+        }
       ]
     },
     {
-      path:'/productDetail',
-      name:'ProductDetail',
-      component:()=> import('@/pages/productDetail/productDetail.vue')
+      path: '/productDetail',
+      name: 'ProductDetail',
+      component: () => import('@/pages/productDetail/productDetail.vue')
     }
   ]
-});
+})

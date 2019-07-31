@@ -1,110 +1,59 @@
 <template>
-<div>
-  <!-- 联系人卡片 -->
-  <van-contact-card
-  :type="cardType"
-  :name="currentContact.name"
-  :tel="currentContact.tel"
-  @click="showList = true"
-  />
-
-  <!-- 联系人列表 -->
-  <van-popup v-model="showList" position="bottom">
-  <van-contact-list
-    v-model="chosenContactId"
-    :list="list"
-    @add="onAdd"
-    @edit="onEdit"
-    @select="onSelect"
-  />
-  </van-popup>
-
-  <!-- 联系人编辑 -->
-  <van-popup v-model="showEdit" position="bottom">
-    <van-contact-edit
-    :contact-info="editingContact"
-    :is-edit="isEdit"
-    @save="onSave"
-    @delete="onDelete"
-  />
-  </van-popup>
-</div>
+  <div>
+    <div class="calendar-box" @click="calendarFlag=true">{{weekRange}}</div>
+    <div
+      class="calendar-mask"
+      v-show="calendarFlag"
+      @touchmove.prevent
+      @click.self="calendarFlag=false"
+    >
+      <div>
+        <calendar-week @chooseWeek="chooseWeek" :incomingDate="new Date(1562947200000)"></calendar-week>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import calendarWeek from '@/components/calendar/calendarWeek'
 export default {
-  name: "my",
+  name: 'My',
+
+  components: {
+    calendarWeek
+  },
 
   data() {
     return {
-      chosenContactId: null,
-      editingContact: {},
-      showList: false,
-      showEdit: false,
-      isEdit: false,
-      list: [{
-        name: '张三',
-        tel: '13000000000',
-        id: 0
-      }]
-    };
-  },
-
-  computed: {
-    cardType() {
-      return this.chosenContactId !== null ? 'edit' : 'add';
-    },
-
-    currentContact() {
-      const id = this.chosenContactId;
-      return id !== null ? this.list.filter(item => item.id === id)[0] : {};
+      weekRange: '2019/07/08 2019/07/14',
+      calendarFlag: false
     }
   },
 
   methods: {
-    // 添加联系人
-    onAdd() {
-      this.editingContact = { id: this.list.length };
-      this.isEdit = false;
-      this.showEdit = true;
-    },
-
-    // 编辑联系人
-    onEdit(item) {
-      this.isEdit = true;      
-      this.showEdit = true;
-      this.editingContact = item;
-    },
-
-    // 选中联系人
-    onSelect() {
-      this.showList = false;
-    },
-
-    // 保存联系人
-    onSave(info) {
-      this.showEdit = false;
-      this.showList = false;
-      
-      if (this.isEdit) {
-        this.list = this.list.map(item => item.id === info.id ? info : item);
-      } else {
-        this.list.push(info);
-      }
-      this.chosenContactId = info.id;
-    },
-
-    // 删除联系人
-    onDelete(info) {
-      this.showEdit = false;
-      this.list = this.list.filter(item => item.id !== info.id);
-      if (this.chosenContactId === info.id) {
-        this.chosenContactId = null;
-      }
+    chooseWeek(date) {
+      this.weekRange = date.join(' ')
+      this.calendarFlag = false
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>
+.calendar-box {
+  width: 5rem;
+  height: 0.56rem;
+  font-size: 0.28rem;
+  border-radius: 0.28rem;
+  border: 0.01rem solid green;
+}
+//日期选择
+.calendar-mask {
+  position: fixed;
+  top: 1.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
 </style>

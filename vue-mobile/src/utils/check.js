@@ -1,110 +1,110 @@
 ﻿const dateToFormat = date => {
   date
-    .toLocaleString("en-US", {
+    .toLocaleString('en-US', {
       hour12: false
     })
-    .replace(/\b\d\b/g, "0$&")
-    .replace(new RegExp("/", "gm"), "-");
-};
+    .replace(/\b\d\b/g, '0$&')
+    .replace(new RegExp('/', 'gm'), '-')
+}
 const forMatToDate = date => {
-  let dateArr = date.split(":");
-  return new Date(2017, 10, 19, dateArr[0], dateArr[1], dateArr[2]);
-};
+  const dateArr = date.split(':')
+  return new Date(2017, 10, 19, dateArr[0], dateArr[1], dateArr[2])
+}
 const obtainNowDate = () => {
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
-  let hours = date.getHours();
-  let minu = date.getMinutes();
-  let second = date.getSeconds();
-  let arr = [month, day, hours, minu, second];
+  const date = new Date()
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hours = date.getHours()
+  const minu = date.getMinutes()
+  const second = date.getSeconds()
+  const arr = [month, day, hours, minu, second]
   arr.forEach(item => {
-    item < 10 ? "0" + item : item;
-  });
+    item < 10 ? '0' + item : item
+  })
   return (
     year +
-    "-" +
+    '-' +
     arr[0] +
-    "-" +
+    '-' +
     arr[1] +
-    " " +
+    ' ' +
     arr[2] +
-    ":" +
+    ':' +
     arr[3] +
-    ":" +
+    ':' +
     arr[4]
-  );
-};
+  )
+}
 const returnTimestamp = strTime => {
-  let middleDate = new Date(Number(strTime));
+  const middleDate = new Date(Number(strTime))
   return middleDate
-    .toLocaleString("zh-CN", {
+    .toLocaleString('zh-CN', {
       hour12: false
     })
-    .replace(/\b\d\b/g, "0$&")
-    .replace(new RegExp("/", "gm"), "-");
-};
+    .replace(/\b\d\b/g, '0$&')
+    .replace(new RegExp('/', 'gm'), '-')
+}
 const compareOneLessTwo = (dateOne, dateTwo) => {
   return (
-    Number(dateOne.replace(/\-/g, "")) < Number(dateTwo.replace(/\-/g, ""))
-  );
-};
+    Number(dateOne.replace(/\-/g, '')) < Number(dateTwo.replace(/\-/g, ''))
+  )
+}
 const judgeArr = arr => {
   if (Array.isArray(arr)) {
-    return true;
+    return true
   }
-};
+}
 const removeRepeatArr = arr => {
-  return Array.from(new Set(arr));
-};
+  return Array.from(new Set(arr))
+}
 const orderAscendArr = arr => {
   arr.sort((a, b) => {
-    return a - b;
-  });
-};
+    return a - b
+  })
+}
 const allArrSatisfact = (arr, compare, value) => {
   return arr.every(arr => {
-    return arr + compare + value;
-  });
-};
+    return arr + compare + value
+  })
+}
 const judgeNum = num => {
-  if (typeof num1 === "number") {
-    return true;
+  if (typeof num1 === 'number') {
+    return true
   } else {
-    return false;
+    return false
   }
-};
+}
 const judgeNumOrLetter = data => {
-  let reg = /^[0-9a-zA-Z]*$/g;
+  const reg = /^[0-9a-zA-Z]*$/g
   if (reg.test(data)) {
-    return true;
+    return true
   }
-};
+}
 const trimLeftOrRight = str => {
-  return str.replace(/(^s)|(s$)/g, "");
-};
+  return str.replace(/(^s)|(s$)/g, '')
+}
 const isObjectEqual = (oneData, twoData) => {
-  let twoFlag = JSON.stringify(oneData) === JSON.stringify(twoData);
+  const twoFlag = JSON.stringify(oneData) === JSON.stringify(twoData)
   if (twoFlag) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
-};
+}
 const checkAgent = () => {
-  var u = navigator.userAgent,
-    Agent = "";
+  var u = navigator.userAgent
+  var Agent = ''
 
-  var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1; //android终端或者uc浏览器
-  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1 // android终端或者uc浏览器
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
   if (isAndroid) {
-    Agent = "Android";
+    Agent = 'Android'
   } else if (isiOS) {
-    Agent = "IOS";
+    Agent = 'IOS'
   }
-  return Agent;
-};
+  return Agent
+}
 export {
   dateToFormat,
   forMatToDate,
@@ -120,4 +120,4 @@ export {
   trimLeftOrRight,
   isObjectEqual,
   checkAgent
-};
+}

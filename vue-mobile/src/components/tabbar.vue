@@ -21,53 +21,53 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
-  name: "tabbar",
+  name: 'Tabbar',
 
-  computed:{
+  computed: {
     ...mapGetters({
-      tabIndex: "allTabIndex",
-    }),
+      tabIndex: 'allTabIndex'
+    })
   },
 
   data() {
     return {
       tabActive: [true, false, false, false, false]
-    };
+    }
   },
 
-  created(){
-    this.changeTabActive(this.tabIndex);
+  created() {
+    this.changeTabActive(this.tabIndex)
   },
 
   methods: {
-    //tab点击事件
+    // tab点击事件
     tabChange(activeIndex) {
-      this.changeTabActive(activeIndex);
-      this.switchTab(activeIndex);
-      //传惨
-      this.$store.dispatch('getAllTabIndex',activeIndex);
+      this.changeTabActive(activeIndex)
+      this.switchTab(activeIndex)
+      // 传惨
+      this.$store.dispatch('getAllTabIndex', activeIndex)
     },
 
-    //改变tabActive值
-    changeTabActive(activeIndex){
+    // 改变tabActive值
+    changeTabActive(activeIndex) {
       this.tabActive.map((item, index) => {
-        this.$set(this.tabActive, index, false);
-      });
-      this.$set(this.tabActive, activeIndex, true);
+        this.$set(this.tabActive, index, false)
+      })
+      this.$set(this.tabActive, activeIndex, true)
     },
 
-    //切换tabbar
+    // 切换tabbar
     switchTab(activeIndex) {
-      let arrUrl = ["main", "classify", "product", "shopcart", "my"];
+      const arrUrl = ['main', 'classify', 'product', 'shopcart', 'my']
       arrUrl.map((item, index) => {
-        if (index === activeIndex) this.$router.push("/" + item);
-      });
+        if (index === activeIndex) this.$router.push('/' + item)
+      })
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

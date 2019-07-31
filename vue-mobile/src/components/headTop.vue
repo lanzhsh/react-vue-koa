@@ -10,43 +10,42 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from 'vuex'
 export default {
-  name: "headTop",
+  name: 'HeadTop',
 
-  props:{
-    leftText:{
-      type:String,
-      default:''
+  props: {
+    leftText: {
+      type: String,
+      default: ''
     },
-    arrowFlag:{
-      type:Boolean,
-      default:false
+    arrowFlag: {
+      type: Boolean,
+      default: false
     }
   },
 
   computed: {
     ...mapGetters({
-        tabIndex: "allTabIndex",
+      tabIndex: 'allTabIndex'
     }),
-    titleText(){
-      let arrText=['首页','分类','商品','购物车','我的'];
-      return arrText[this.tabIndex];
+    titleText() {
+      const arrText = ['首页', '分类', '商品', '购物车', '我的']
+      return arrText[this.tabIndex]
     }
   },
-    
 
   data() {
-    return {};
+    return {}
   },
 
   methods: {
     onClickLeft() {
-      this.$router.go(-1);
+      this.$router.go(-1)
     }
   }
 
-};
+}
 </script>
 
 <style scoped lang='scss'>

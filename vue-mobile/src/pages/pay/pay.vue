@@ -37,10 +37,9 @@
 </template>
 
 <script>
-import headTop from "@/components/headTop";
-import axios from "axios";
+import headTop from '@/components/headTop'
 export default {
-  name: "pay",
+  name: 'Pay',
 
   components: {
     headTop
@@ -49,100 +48,99 @@ export default {
   data() {
     return {
       payInfo: {
-        orderId: "",
-        productName: "",
-        payFee: "",
-        productType:""
+        orderId: '',
+        productName: '',
+        payFee: '',
+        productType: ''
       },
       checked: false,
       prepay: {},
-      action: "",
-      actionLog: "",
-      params: "",
-      openIdPar:"",
-      orderIdPar:""
-    };
+      action: '',
+      actionLog: '',
+      params: '',
+      openIdPar: '',
+      orderIdPar: ''
+    }
   },
 
   mounted() {
-    //获取页面参数
-    this.openIdPar = this.$route.query.openId||'oCxqU0oIGabayAxUO2pMmFizzznU';
-    this.orderIdPar = this.$route.query.orderId||'514041036532613120';
+    // 获取页面参数
+    this.openIdPar = this.$route.query.openId || 'oCxqU0oIGabayAxUO2pMmFizzznU'
+    this.orderIdPar = this.$route.query.orderId || '514041036532613120'
     this.$request({
       url: this.$api.orderInfo,
-      method: "get",
+      method: 'get',
       params: { orderId: this.orderIdPar }
     }).then(res => {
-      this.payInfo.orderId = res.data.orderId;
-      this.payInfo.productName = res.data.productName;
-      this.payInfo.payFee = res.data.payFee;
-      this.payInfo.productType = res.data.productType;
-
-    });
+      this.payInfo.orderId = res.data.orderId
+      this.payInfo.productName = res.data.productName
+      this.payInfo.payFee = res.data.payFee
+      this.payInfo.productType = res.data.productType
+    })
   },
 
   methods: {
     immediatePay() {
       if (!this.checked) {
-        this.$toast("请先勾选名师IP服务协议");
-        return false;
+        this.$toast('请先勾选名师IP服务协议')
+        return false
       }
 
       this.$request({
         url: this.$api.orderPay,
-        method: "post",
+        method: 'post',
         data: {
           openId: this.openIdPar,
           orderId: this.orderIdPar,
-          tradeType: "JSAPI"
+          tradeType: 'JSAPI'
         }
       }).then(res => {
         if (!res.code) {
-          this.prepay = res.data.prepay;
+          this.prepay = res.data.prepay
           if (!typeof WeixinJSBridge) {
             if (document.addEventListener) {
               document.addEventListener(
-                "WeixinJSBridgeReady",
+                'WeixinJSBridgeReady',
                 this.onBridgeReady,
                 false
-              );
+              )
             } else if (document.attachEvent) {
-              document.attachEvent("WeixinJSBridgeReady", this.onBridgeReady);
-              document.attachEvent("onWeixinJSBridgeReady", this.onBridgeReady);
+              document.attachEvent('WeixinJSBridgeReady', this.onBridgeReady)
+              document.attachEvent('onWeixinJSBridgeReady', this.onBridgeReady)
             }
           } else {
-            this.onBridgeReady();
+            this.onBridgeReady()
           }
         }
-      });
+      })
     },
 
     onBridgeReady() {
-      let _this=this;
-      const prepay = _this.prepay;
+      const _this = this
+      const prepay = _this.prepay
       var params = {
-        appId: prepay.appId, //公众号名称，由商户传入
-        timeStamp: prepay.timeStamp, //时间戳，自1970年以来的秒数
-        nonceStr: prepay.nonceStr, //随机串
+        appId: prepay.appId, // 公众号名称，由商户传入
+        timeStamp: prepay.timeStamp, // 时间戳，自1970年以来的秒数
+        nonceStr: prepay.nonceStr, // 随机串
         package: prepay.packageStr,
-        signType: prepay.signType, //微信签名方式：
-        paySign: prepay.sign //微信签名
-      };
-      WeixinJSBridge.invoke("getBrandWCPayRequest", params, function(res) {
-        console.log(res);
+        signType: prepay.signType, // 微信签名方式：
+        paySign: prepay.sign // 微信签名
+      }
+      WeixinJSBridge.invoke('getBrandWCPayRequest', params, function(res) {
+        console.log(res)
         // this.actionLog = res;
-        if (res.err_msg === "get_brand_wcpay_request:ok") {
+        if (res.err_msg === 'get_brand_wcpay_request:ok') {
           // 使用以上方式判断前端返回,微信团队郑重提示：
-          //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+          // res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
           _this.$router.push({
-            name: "PaySuccess",
-            params: {'productType':_this.payInfo.productType}
-          });
+            name: 'PaySuccess',
+            params: { 'productType': _this.payInfo.productType }
+          })
         }
-      });
+      })
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

@@ -3,7 +3,6 @@
   <head-top leftText="返回" :arrowFlag="true"></head-top>
   <img src="@/pages/productDetail/img/product-detail1.jpg" alt="">
 
-  
   <van-goods-action>
   <van-goods-action-mini-btn icon="chat" text="客服" @click="onClickMiniBtn" />
   <van-goods-action-mini-btn icon="cart" text="购物车" @click="onClickMiniBtn" />
@@ -14,16 +13,16 @@
 </template>
 
 <script>
-import headTop from '@/components/headTop';
+import headTop from '@/components/headTop'
 export default {
-  name: "productDetail",
+  name: 'ProductDetail',
 
-  components:{
+  components: {
     headTop
   },
 
   data() {
-    return {};
+    return {}
   },
 
   methods: {
@@ -34,7 +33,7 @@ export default {
       // Toast('点击按钮');
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

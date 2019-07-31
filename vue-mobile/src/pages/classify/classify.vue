@@ -5,7 +5,7 @@
     num="2"
     tag="标签"
     price="2.00"
-    desc="描述信息"  
+    desc="描述信息"
     title="商品标题"
     :thumb="imageURL"
     origin-price="10.00"
@@ -22,28 +22,28 @@
 </template>
 
 <script>
-import pullRefresh from '@/components/pullRefresh';
+import pullRefresh from '@/components/pullRefresh'
 
 export default {
-  name: "classify",
+  name: 'Classify',
 
-  components:{
+  components: {
     pullRefresh
   },
 
   data() {
     return {
-      classifyList:[1,2,3,4,5,6],
-      imageURL:require('@/pages/classify/img/classify1.jpg')
-    };
+      classifyList: [1, 2, 3, 4, 5, 6],
+      imageURL: require('@/pages/classify/img/classify1.jpg')
+    }
   },
 
   methods: {
-    btnClick(){
-      console.log('执行啦');
+    btnClick() {
+      console.log('执行啦')
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

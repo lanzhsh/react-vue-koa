@@ -1,9 +1,15 @@
+# 是否是顶级配置
 root = true
 
 [*]
 charset = utf-8
+# 缩进方式
 indent_style = space
+# 缩进大小
 indent_size = 2
+# 换行符类型
 end_of_line = lf
+# 是否让文件以空行结束
 insert_final_newline = true
+# 是否删除行尾空格
 trim_trailing_whitespace = true

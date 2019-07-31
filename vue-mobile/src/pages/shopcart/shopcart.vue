@@ -28,15 +28,15 @@
 
 <script>
 export default {
-  name: "shopcart",
+  name: 'Shopcart',
 
   data() {
     return {
       list: [],
       loading: false,
       finished: false,
-      isLoading:false,
-    };
+      isLoading: false
+    }
   },
 
   methods: {
@@ -45,15 +45,15 @@ export default {
         case 'left':
         case 'cell':
         case 'outside':
-          instance.close();
-          break;
+          instance.close()
+          break
         case 'right':
           this.$dialog.confirm({
             message: '确定删除吗？'
           }).then(() => {
-            instance.close();
-          });
-          break;
+            instance.close()
+          })
+          break
       }
     },
 
@@ -61,27 +61,27 @@ export default {
       // 异步更新数据
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
-          this.list.push(this.list.length + 1);
+          this.list.push(this.list.length + 1)
         }
         // 加载状态结束
-        this.loading = false;
+        this.loading = false
 
         // 数据全部加载完成
         if (this.list.length >= 40) {
-          this.finished = true;
+          this.finished = true
         }
-      }, 500);
+      }, 500)
     },
 
     onRefresh() {
       setTimeout(() => {
-        this.$toast('刷新成功');
-        this.isLoading = false;
-        this.count++;
-      }, 500);
+        this.$toast('刷新成功')
+        this.isLoading = false
+        this.count++
+      }, 500)
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

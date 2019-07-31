@@ -22,15 +22,15 @@ const coupon = {
   discount: 0,
   denominations: 150,
   originCondition: 0,
-  reason: "",
+  reason: '',
   value: 150,
-  name: "优惠券名称",
+  name: '优惠券名称',
   startAt: 1489104000,
   endAt: 1514592000
-};
+}
 
 export default {
-  name: "product",
+  name: 'Product',
 
   data() {
     return {
@@ -39,34 +39,34 @@ export default {
       disabledCoupons: [coupon],
       showList: false,
       items: [],
-      loadNext: false,
-    };
+      loadNext: false
+    }
   },
 
   mounted() {
     for (var i = 1; i <= 20; i++) {
-      this.items.push(i + " - keep walking, be 2 with you.");
+      this.items.push(i + ' - keep walking, be 2 with you.')
     }
-    this.top = 1;
-    this.bottom = 20;
+    this.top = 1
+    this.bottom = 20
   },
 
   methods: {
     onChange(index) {
-      this.showList = false;
-      this.chosenCoupon = index;
+      this.showList = false
+      this.chosenCoupon = index
     },
     onExchange(code) {
-      this.coupons.push(coupon);
-    },
+      this.coupons.push(coupon)
+    }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>
 .row {
-  width: 100%;
   height: 50px;
+  width: 100%;
   padding: 10px 0;
   font-size: 16px;
   line-height: 30px;
@@ -74,5 +74,5 @@ export default {
   color: #444;
   background-color: #fff;
 }
-  
+
 </style>

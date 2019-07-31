@@ -9,24 +9,24 @@
 
 <script>
 export default {
-  name: "pullRefresh",
+  name: 'PullRefresh',
   data() {
     return {
       count: 0,
       isLoading: false
-    };
+    }
   },
 
   methods: {
     onRefresh() {
       setTimeout(() => {
-        this.$toast('刷新成功');
-        this.isLoading = false;
-        this.count++;
-      }, 500);
+        this.$toast('刷新成功')
+        this.isLoading = false
+        this.count++
+      }, 500)
     }
   }
-};
+}
 </script>
 
 <style scoped lang='scss'>

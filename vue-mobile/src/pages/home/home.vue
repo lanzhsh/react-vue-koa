@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import headTop from '@/components/headTop';
-import tabbar from '@/components/tabbar';
+import headTop from '@/components/headTop'
+import tabbar from '@/components/tabbar'
 export default {
-  name: "home",
+  name: 'Home',
 
   props: {},
 
@@ -22,8 +22,8 @@ export default {
 
   data() {
     return {
-      
-    };
+
+    }
   },
 
   computed: {},
@@ -33,9 +33,9 @@ export default {
   mounted() {},
 
   methods: {
-    
+
   }
-};
+}
 </script>
 <style lang='scss' scoped>
 .home-bgc {
