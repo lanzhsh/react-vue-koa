@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 888094 */
+  src: url('//at.alicdn.com/t/font_888094_7yfvsmsgxf8.eot');
+  src: url('//at.alicdn.com/t/font_888094_7yfvsmsgxf8.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_888094_7yfvsmsgxf8.woff') format('woff'),
+  url('//at.alicdn.com/t/font_888094_7yfvsmsgxf8.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_888094_7yfvsmsgxf8.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_picture::before {
+  content: "\e674";
+}
+
+.icon_huabu::before {
+  content: "\e6a1";
+}
+
+.icon_weizhi::before {
+  content: "\e614";
+}
+
+.icon_goback::before {
+  content: "\e631";
+}
+
+.icon_voice::before {
+  content: "\e604";
+}
+
+.icon_record::before {
+  content: "\e600";
+}
+
+.icon_backaudio::before {
+  content: "\e6a2";
+}
+
+.icon_backbegin::before {
+  content: "\e99d";
+}
+
+.icon_backend::before {
+  content: "\e724";
+}
+
+.icon_longitude::before {
+  content: "\e67f";
+}

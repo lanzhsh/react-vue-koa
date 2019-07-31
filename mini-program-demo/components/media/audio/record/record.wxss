@@ -1,0 +1,4 @@
+@import "../../../../styles/iconfont.wxss";
+.record-btn{
+  font-size:60rpx;
+}

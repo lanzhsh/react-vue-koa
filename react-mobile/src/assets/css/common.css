@@ -1,0 +1,27 @@
+.fr{
+  float:right;
+}
+
+.fl{
+  float:left;
+}
+
+.clearfix:after{
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.pos-a{
+  position:absolute;
+}
+
+.pos-r{
+  position:relative;
+}
+
+.pos-f{
+  position:fixed;
+}

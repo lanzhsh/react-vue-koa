@@ -1,0 +1,9 @@
+@import "../../../../styles/iconfont.wxss";
+.back-audio{
+ display: flex;
+ flex-direction: column;
+}
+
+.back-begin,.back-middle,.back-end{
+  font-size:60rpx;
+}

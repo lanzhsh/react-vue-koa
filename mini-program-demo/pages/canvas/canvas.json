@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navigation": "/components/navigation/navigation",
+    "poster": "/components/canvas/poster/index"
+  }
+}

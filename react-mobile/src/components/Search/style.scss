@@ -1,0 +1,169 @@
+.qqmusic-search-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #f5f5f9;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-out;
+    &.show {
+        transform: translateY(0);
+    }
+    .qqmusic-search-top {
+        position: relative;
+        background: #31c37c;
+        
+        box-sizing: border-box;
+        padding: 10px 80px 10px 40px;
+        .icon-arrow-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .input-text {
+            width: 100%;
+            background: #31c37c;
+            color: #dbf3e8;
+            font-size: 15px;
+        }
+        .input-text::placeholder {
+            color: #dbf3e8;
+            opacity: 0.6;
+        }
+        .icon-input-clear {
+            position: absolute;
+            right: 50px;
+            top: 7px;
+            background: url("../../assets/icon-input-clear.png");
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+        }
+        .btn-search {
+            position: absolute;
+            display: inline-block;
+            right: 10px;
+            top: 10px;
+            color: #dbf3e8;
+        }
+    }
+    .qqmusic-search-bottom {
+        flex: 1;
+        overflow: scroll;
+        .qqmusic-search-list {
+            background: #fff;
+            .qqmusic-search-list-item {
+                display: flex;
+                padding: 5px 15px;
+                .left{
+                    flex: 1;
+                    .title {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    .singer {
+                        font-size: 13px;
+                        padding: 5px 0;
+                        color: #707070;
+                    }
+                    .intro {
+                        font-size: 11px;
+                        line-height: 14px;
+                        color: #bfbfbf;
+                    }
+                }
+                .right{
+                    width: 60px;
+                    .cover{
+                        width: 100%;
+                        
+                    }
+                }
+               
+            }
+            .hint {
+                text-align: center;
+                line-height: 31px;
+                font-size: 15px;
+                background-color: #f5f5f9;
+            }
+        }
+    }
+    .remind-mask {
+        position: absolute;
+        top:40px;
+        right:0;
+        bottom: 0;
+        left: 0;
+        .search-text-list-wrapper{
+            padding: 15px;
+            background: #fff;
+            .title-hot-search{
+                color: #8a8a8a;
+                padding: 15px 0;
+                font-weight: 400;
+                font-size: 15px;
+            }
+            .search-text-list{
+                .search-text-item{
+                    display: inline-block;
+                    border-radius: 40px;
+                    border: 1px solid #515151;
+                    color: #373737;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 10px;
+                    margin: 5px;
+                }
+            }
+        }
+        .title-search-history{
+            position: relative;
+            color: #8a8a8a;
+            padding: 15px 0 15px 15px;
+            font-weight: 400;
+            font-size: 15px;
+            background-color: #fff;
+            .clean-record{
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: #31c37c;
+            }
+        }
+        .record-list {
+            .record-item {
+                position: relative;
+                background: #fff;
+                height: 45px;
+                line-height: 45px;
+                padding-left: 60px;
+                .icon-recent {
+                    position: absolute;
+                    left: 15px;
+                    top: 7px;
+                    background: url("../../assets/icon-record-recent.png") no-repeat;
+                    background-size: cover;
+                    width: 26px;
+                    height: 26px;
+                }
+                .icon-close {
+                    position: absolute;
+                    right: 15px;
+                    top: 12px;
+                    background: url("../../assets/icon-record-close.png") no-repeat;
+                    background-size: cover;
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+    }
+}

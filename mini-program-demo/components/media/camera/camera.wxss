@@ -1,0 +1,9 @@
+.preview-tips {
+  margin: 20rpx 0;  
+}
+
+.video {
+  margin: 50px auto;
+  width: 100%;
+  height: 300px;
+}

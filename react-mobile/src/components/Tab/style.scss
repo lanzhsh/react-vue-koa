@@ -1,0 +1,37 @@
+
+@import '@/assets/css/variable.scss';
+.tabbar {
+  background:#ffffff;
+  bottom: 0;
+  border-top: 1px solid rgba(69, 90, 100, 0.6);
+}
+.tabbar-list {
+  li {
+    float: left;
+    width: 1.3rem;
+    padding: .1rem;
+  }
+
+  li.active {
+    color: $primary-color;
+  }
+
+  p,
+  span {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: .4rem;
+  }
+
+  span {
+    padding-bottom: .1rem;
+    font-size: .5rem;
+  }
+}
+a{
+  color:gray;
+}

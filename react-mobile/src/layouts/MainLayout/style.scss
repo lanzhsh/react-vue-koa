@@ -1,0 +1,9 @@
+.qqmusic-home{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.qqmusic-home-body{
+    flex: 1;
+    overflow: scroll;
+}

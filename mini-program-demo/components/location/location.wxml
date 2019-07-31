@@ -1,0 +1,12 @@
+<view class="location">
+  <text class="iconfont icon_longitude longitude" bindtap="getLongitude"></text>
+  <view class="location-text" wx:if="{{latitude}}">
+    latitude值为{{latitude}}
+    longitude值为{{longitude}}
+    speed值为{{speed}}
+    accuracy值为{{accuracy}}
+  </view>
+  <view class="location-text" wx:else>
+    点击图标获取
+  </view>
+</view>

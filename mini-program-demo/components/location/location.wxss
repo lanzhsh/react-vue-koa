@@ -1,0 +1,6 @@
+/* 引入iconfont */
+@import "../../styles/iconfont.wxss";
+
+.longitude{
+  font-size:60rpx;
+}

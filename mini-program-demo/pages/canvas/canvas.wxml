@@ -1,0 +1,8 @@
+<navigation title="画布" back="{{false}}" home="{{true}}" />
+<view class="canvas">
+<poster id="poster" hide-loading="{{true}}" preload="{{true}}" config="{{jdConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button>生成海报</button>
+</poster>
+
+<button bindtap="onCreatePoster">异步生成海报</button>
+</view>

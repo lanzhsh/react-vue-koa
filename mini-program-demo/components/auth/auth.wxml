@@ -1,0 +1,19 @@
+<view class="authorized-popup pop-up-box" wx:if="{{show}}">
+  <view class="pop-up-mask"></view>
+  <view class="pop-up-content">
+    <view class="title">需要您的授权</view>
+    <view class="tips">
+      <view class="t">为了提供更好的服务</view>
+      <view class="t">请在稍后的提示框中点击“允许”</view>
+    </view>
+    <image class="img" src="./images/jurisdiction.png" />
+    <view class="btn button-opacity-p">
+      <button
+        class="button-opacity"
+        open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo"
+      ></button>
+      我知道了
+    </view>
+  </view>
+</view>

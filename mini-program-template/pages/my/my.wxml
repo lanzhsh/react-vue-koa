@@ -1,0 +1,54 @@
+<navigation title="我的" back="{{false}}" home="{{true}}" />
+<view class="weui-cells__title">表单</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">qq</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入qq" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">手机号</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入手机号" />
+    </view>
+    <view class="weui-cell__ft">
+      <view class="weui-vcode-btn">获取验证码</view>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">日期</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">时间</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="weui-input">{{time}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">验证码</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入验证码" />
+    </view>
+    <view class="weui-cell__ft">
+      <image class="weui-vcode-img" src="../../images/vcode.jpg" style="width: 108px"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="">
+    <title>react-mobile</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+    function a() {
+    var b = document.documentElement.clientWidth;
+    b = b > 750 ? 750 : b;//这个值可以根据设计图尺寸变化
+    var c = (b / 750) * 100;
+    document.getElementsByTagName('html')[0].style.fontSize = c + 'px';
+    }
+    a();
+    window.onresize = a();
+    </script>
+
+</body>
+</html>

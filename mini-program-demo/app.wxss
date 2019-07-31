@@ -1,0 +1,119 @@
+/* 引入iconfont */
+@import "./styles/iconfont.wxss";
+@import "./styles/weui.wxss";
+
+.container {
+  font-size: 30rpx;
+  line-height: 1.5;
+  color: #333;
+  word-break: break-all;
+}
+
+/*布局*/
+.position-rel {
+  position: relative;
+}
+
+.d-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.d-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+  box-sizing: borer-box;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: borer-box;
+}
+
+/*字体对齐和删除线*/
+.text-line {
+  text-decoration: line-through
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/*字体粗细*/
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+/*隐藏字段*/
+
+.overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*两排字  */
+
+.overflow-scroll {
+  white-space: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/*  遮罩层 */
+.botttom-bg {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0rpx;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+/** from表单样式  */
+
+.formBox-temp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.formBox-temp .formBtn-temp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.iphoneXview {
+  height: 80rpx;
+  width: 100%;
+  background-color: white
+}

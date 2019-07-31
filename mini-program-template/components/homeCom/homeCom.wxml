@@ -1,0 +1,4 @@
+<view class="home-com">
+  <button class="weui-btn" type="primary">我是homeCom的button,点击触发传值</button>
+  <span>{{content}}</span>
+</view>

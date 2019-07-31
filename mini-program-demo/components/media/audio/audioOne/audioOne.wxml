@@ -1,0 +1,17 @@
+<view class="audio-box">
+  <text>语音介绍</text>
+  <view class='audio' wx:if="{{!playFlag}}" bindtap="playAudio">
+    <text class='triangle'></text>
+    <text class='iconfont icon_voice'></text>
+    <text class='intro'>语音介绍</text>
+    <text class='times'></text>
+    <view class='dot'></view>
+  </view>
+  <view class='audio' wx:if="{{playFlag}}" bindtap="pauseAudio">
+    <text class='triangle'></text>
+    <text class='iconfont icon_voice'></text>
+    <text class='intro'>语音介绍</text>
+    <text class='times'></text>
+    <view class='dot'></view>
+  </view>
+</view>

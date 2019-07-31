@@ -1,0 +1,55 @@
+/* 引入iconfont */
+@import "../../../../styles/iconfont.wxss";
+
+.audio {
+  width: 306rpx;
+  height: 76rpx;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  background: #FAFAFA;
+  border: 0 solid #CCCCCC;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0,0,0,0.10);
+  border-radius: 8rpx;
+  margin: 24rpx;
+  position: relative;
+}
+.audio .triangle {
+  display:block;
+  border-width:8rpx 8rpx 8rpx 0;
+  border-style:solid;
+  border-color:transparent #FAFAFA transparent transparent;/*透明 黄 透明 透明 */
+  position:absolute;
+  top:32rpx;
+  left:-8rpx;
+}
+.audio text {
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.audio .iconfont {
+  padding-left: 24rpx;
+}
+
+.audio .intro{
+  display: block;
+  margin-left: 16rpx;
+}
+.audio .times {
+  display: block;
+  margin-left: 16rpx;
+}
+
+.audio .dot {
+  position: absolute;
+  right: 12rpx;
+  top: 12rpx;
+  display: block;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #E35600;
+}

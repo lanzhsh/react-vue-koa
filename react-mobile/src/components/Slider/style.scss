@@ -1,0 +1,110 @@
+// 菜单浮层
+.qqmusic-slider-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2016;
+    display: none;
+    &.open {
+        display: block;
+    }
+}
+
+.qqmusic-slider {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    z-index: 2017;
+    &.open {
+        transform: translateX(0);
+    }
+    .qqmusic-slider-header {
+        display: flex;
+        flex: 0 0 125px;
+        padding-bottom: 20px;
+        .qqmusic-slider-header-Item {
+            flex: 1;
+            text-align: center;
+            .qqmusic-slider-header-Item-img {
+                width: 35px;
+                height: 35px;
+                margin: 20px 0;
+            }
+            .qqmusic-slider-header-Item-title {
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .qqmusic-slider-header-Item-text {
+                font-size: 11px;
+                font-weight: 300;
+                margin: 5px 0;
+                color: #c7c7c7;
+            }
+        }
+    }
+    .qqmusic-slider-body {
+        flex: 1;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+        .qqmusic-slider-body-item{
+            position: relative;
+            height: 45px;
+            .qqmusic-slider-body-item-text{
+                display: block;
+                font-size: 14px;
+                line-height: 45px;
+            }
+            .qqmusic-slider-body-item-extra{
+                position: absolute;
+                right: 10px;
+                top:5px;
+            }
+        } 
+    }
+    .qqmusic-slider-footer {
+        display: flex;
+        flex: 0 0 50px;
+        .qqmusic-slider-footer-left,.qqmusic-slider-footer-right{
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .qqmusic-slider-footer-left{
+             .qqmusic-slider-footer-icon  {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url('../../assets/icon-slider-setting.png');
+                background-size: 20px, 20px;            
+             }       
+        }
+        .qqmusic-slider-footer-right{
+            justify-content: flex-end;                                                            
+            .qqmusic-slider-footer-icon  {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: url('../../assets/icon-slider-exit.png');
+                background-size: 15px, 15px;            
+             }        
+        }
+
+        .qqmusic-slider-footer-text {
+            margin-left:5px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}

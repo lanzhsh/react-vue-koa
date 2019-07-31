@@ -1,0 +1,4 @@
+<navigation title="位置" back="{{false}}" home="{{true}}" />
+<view class="location">
+  <location/>
+</view>

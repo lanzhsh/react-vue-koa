@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navigation": "/components/navigation/navigation",
+    "location": "/components/location/location"
+  }
+}

@@ -1,0 +1,96 @@
+/* 引入iconfont */
+@import "../../styles/iconfont.wxss";
+
+/* .navigation {
+  position: relative;
+  padding-left: 220rpx;
+  padding-right: 220rpx;
+  height: 44px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.navigation .left {
+  position: absolute;
+  left: 32rpx;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.back .iconfont {
+  font-size: 60rpx;
+}
+.home {
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.home .picture {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+} */
+
+/* 引入iconfont */
+@import "../../styles/iconfont.wxss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding-left: 220rpx;
+  padding-right: 220rpx;
+  height: 44px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.header .left {
+  position: absolute;
+  left: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.only-back {
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+.back .iconfont {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70rpx;
+}
+.home {
+  width: 68rpx;
+  height: 68rpx;
+  margin-left: 32rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.home .img {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  font-size: 32rpx;
+  color: #030303;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}

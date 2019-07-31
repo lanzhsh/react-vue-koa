@@ -1,0 +1,83 @@
+// 头部
+@import '@/assets/css/variable.scss';
+@mixin flexCenter () {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qqmusic-header {
+    background-color: $headerMainBackgroundColor;
+    .header-top{
+        width:7.5rem;
+    }
+    .top {
+        position: relative;
+        // @include flexCenter();
+        display:block;
+        white-space:nowrap;
+        overflow-x:auto;
+        height: .4rem;
+        padding:.1rem .2rem;
+        .qqmusic-tab {
+            font-size: 20px;
+            color: $headerFontColor;
+            padding: 0 10px;
+            font-weight: 300;
+        }
+        .qqmusic-tab-active {
+            font-weight: 700;
+        }
+        .icon-left {
+            position: absolute;
+            left: 12px;
+            top: 3px;
+            width: 28px;
+            height: 35px;
+            background: url('../../assets/icon-menu-list.png');
+            background-size: 28px 35px;
+        }
+        .icon-right {
+            position: absolute;
+            right: 12px;
+            top: 6px;
+            width: 28px;
+            height: 28px;
+            background: url('../../assets/icon-menu-add.png');
+            background-size: 28px 28px;
+        }
+    }
+    .bottom {
+        padding: 7px 10px;
+        .search {
+            @include flexCenter();            
+            height: 30px;
+            width: 100%;
+            background-color: $headerSearchBackgroundColor;
+            border-radius: 5px;
+        }
+        .text {
+            margin-left: 5px;
+            font-size: 17px;
+            font-style: normal;
+            color: $headerFontColor;
+            font-weight: 300;            
+        }
+        .search-icon {
+            display: inline-block;
+            background: url('../../assets/icon-search-default.png');
+            height: 18px;
+            width: 18px;
+            background-size: 18px 18px;
+        }
+    }
+}
+.popover-item-img{
+    width: 20px;
+    height: 20px;
+}
+.popover-item-text{
+    padding-left: 10px;
+    font-size: 17px;
+    vertical-align: 4px;
+}

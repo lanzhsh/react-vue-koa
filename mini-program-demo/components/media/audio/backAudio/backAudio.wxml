@@ -1,0 +1,5 @@
+<view class="back-audio">
+  <text>背景音乐和普通音乐的区别是可以在后台播放</text>
+  <text>播放:<text class="iconfont icon_backbegin back-begin" bindtap="begin"></text></text>
+  <text>暂停:<text class="iconfont icon_backend back-end" bindtap="pause"></text></text>
+</view>

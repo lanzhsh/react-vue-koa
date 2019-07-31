@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "navigation": "/components/navigation/navigation",
+    "audioOne":"/components/media/audio/audioOne/audioOne",
+    "audioTwo":"/components/media/audio/audioTwo/audioTwo",
+    "record":"/components/media/audio/record/record",
+    "backAudio":"/components/media/audio/backAudio/backAudio",
+    "camera":"/components/media/camera/camera",
+    "video":"/components/media/video/video",
+    "auth":"/components/auth/auth"
+  }
+}

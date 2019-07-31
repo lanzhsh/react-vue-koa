@@ -1,0 +1,46 @@
+@mixin abs-all($width, $height, $left, $top){
+	position: absolute;
+	width: $width;
+	height: $height;
+	top: $top;
+	left: $left;
+}
+
+@mixin abs($left:0, $top:0){
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+
+@mixin setBg($url, $width:100%, $height:100%){
+	width: $width;
+	height: $height;
+	background:url($url) no-repeat top center;
+	background-size: $width $height;
+}
+
+@mixin fillBg($url, $width, $height){
+	width: ptr($width);
+	height: ptr($height);
+	background:url($url) no-repeat top center;
+	background-size: ptr($width) ptr($height);
+}
+
+@mixin absVO($left:0, $top:0){
+	position: absolute;
+	top: ptr($top);
+	left: ptr($left);
+}
+
+@mixin marginCenter($width, $color){
+	width: ptr($width);
+	margin: 0 auto;
+	background-color: $color;
+}
+
+@mixin marginCenterHeight($width, $height, $color:#fff){
+	width: ptr($width);
+	height: ptr($height);
+	margin: 0 auto;
+	background: $color;
+}

@@ -1,0 +1,23 @@
+.loginBox{
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-image: url(../../assets/login-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center 110px;
+  background-size: 100%;
+}
+.loginForm {
+  width: 300px;
+}
+.loginForgot {
+  float: right;
+}
+.loginButton {
+  width: 100%;
+}

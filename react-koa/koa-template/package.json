@@ -1,0 +1,23 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lanzhsh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-webpack-middleware": "^1.0.7",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.2.7",
+    "nodemon": "^1.18.11",
+    "uuid": "^3.3.2"
+  }
+}

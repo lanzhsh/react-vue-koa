@@ -1,0 +1,3 @@
+<view class="record">
+  <text class="iconfont icon_record record-btn" bindtap="beginRecord"></text>
+</view>

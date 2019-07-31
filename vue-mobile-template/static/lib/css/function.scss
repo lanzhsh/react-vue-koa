@@ -1,0 +1,7 @@
+@function ptr($px) {
+    @return $px/100 * 1rem;
+}
+
+@function ptro($px) {
+    @return $px/100 * 1rem;
+}

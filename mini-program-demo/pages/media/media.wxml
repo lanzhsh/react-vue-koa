@@ -1,0 +1,61 @@
+<navigation
+  title="媒体"
+  back="{{false}}"
+  home="{{true}}"
+/>
+
+<!-- tab切换 -->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+
+      <!-- 选项一内容 -->
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view>
+            1.音频样式一:
+            <audioOne/>
+          </view>
+
+          <view>
+            2.音频样式二:
+            <audioTwo/>
+          </view>
+
+          <view>
+            3.录音:
+            <record/>
+          </view>
+
+          <view>
+            4.背景音乐:
+            <backAudio/>
+          </view>
+
+          <auth bindgetUserInfo="getUserInfo" show="{{showAuthFlag}}"/>
+
+<!-- <button open-type='contact' session-from='{"type": "url", "title": "点击进入官网", "url": "http://xiaokefu.hotapp.cn"}'>自动回复打开网址</button> -->
+
+        </view>
+
+        <!-- 选项二内容 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <camera/>
+        </view>
+
+        <!-- 选项三内容 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <video/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

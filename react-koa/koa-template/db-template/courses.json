@@ -1,0 +1,21 @@
+{
+    "_id" : ObjectId("5cbfc0f7125ebf55e7bd1d0c"),
+    "id" : "3b99e3e0-7598-11e8-90be-95472fb3echj",
+    "name" : "大学物理2",
+    "price" : "20元",
+    "number" : 60
+}
+{
+    "_id" : ObjectId("5cbfc0f7125ebf55e7bd1d0e"),
+    "id" : "3b99e3e0-7598-11e8-90be-95472fb3echy",
+    "name" : "软件工程",
+    "price" : "20元",
+    "number" : 60
+}
+{
+    "_id" : ObjectId("5cbfcee268de78299ccb5b26"),
+    "name" : "大学计算机",
+    "price" : "35元",
+    "number" : 25,
+    "id" : "ad1a8210-663b-11e9-b31a-873fd7865de9"
+}
