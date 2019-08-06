@@ -63,6 +63,7 @@ export default {
   },
 
   mounted() {
+    console.log(' main 的mounted执行啦')
     this.initPie()
     this.initLine()
     this.initBar()

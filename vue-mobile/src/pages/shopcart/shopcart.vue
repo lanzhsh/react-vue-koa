@@ -39,6 +39,14 @@ export default {
     }
   },
 
+  mounted() {
+    console.log('shopCart 的 mounted 触发了')
+  },
+
+  activated() {
+    console.log('shopCart 的 mounted 触发了')
+  },
+
   methods: {
     onClose(clickPosition, instance) {
       switch (clickPosition) {

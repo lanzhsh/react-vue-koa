@@ -16,12 +16,14 @@ export default new Router({
         {
           path: '/main',
           name: 'Main',
-          component: () => import('@/pages/main/main.vue')
+          component: () => import('@/pages/main/main.vue'),
+          meta: { keepAlive: true }
         },
         {
           path: '/classify',
           name: 'Classify',
-          component: () => import('@/pages/classify/classify.vue')
+          component: () => import('@/pages/classify/classify.vue'),
+          meta: { keepAlive: true }
         },
         {
           path: '/product',
@@ -43,7 +45,8 @@ export default new Router({
     {
       path: '/productDetail',
       name: 'ProductDetail',
-      component: () => import('@/pages/productDetail/productDetail.vue')
+      component: () => import('@/pages/productDetail/productDetail.vue'),
+      meta: { keepAlive: true }
     }
   ]
 })

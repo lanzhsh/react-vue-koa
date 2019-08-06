@@ -14,6 +14,7 @@
 
 <script>
 import headTop from '@/components/headTop'
+
 export default {
   name: 'ProductDetail',
 
