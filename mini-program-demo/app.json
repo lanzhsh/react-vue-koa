@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/media/media",
     "pages/file/file",
     "pages/location/location",
@@ -17,39 +17,53 @@
     "audio"
   ],
   "tabBar": {
-    "selectedColor":"#1afa29",
+    "selectedColor": "#1afa29",
     "list": [
       {
         "pagePath": "pages/media/media",
-        "selectedIconPath": "images/media-sel.png", 
-        "iconPath": "images/media.png", 
+        "selectedIconPath": "images/media-sel.png",
+        "iconPath": "images/media.png",
         "text": "媒体"
       },
       {
         "pagePath": "pages/file/file",
-        "selectedIconPath": "images/file-sel.png", 
-        "iconPath": "images/file.png", 
+        "selectedIconPath": "images/file-sel.png",
+        "iconPath": "images/file.png",
         "text": "文件"
       },
       {
         "pagePath": "pages/location/location",
-        "selectedIconPath": "images/location-sel.png", 
+        "selectedIconPath": "images/location-sel.png",
         "iconPath": "images/location.png",
         "text": "位置"
       },
       {
         "pagePath": "pages/map/map",
-        "selectedIconPath": "images/map-sel.png", 
+        "selectedIconPath": "images/map-sel.png",
         "iconPath": "images/map.png",
         "text": "地图"
       },
       {
         "pagePath": "pages/canvas/canvas",
-        "selectedIconPath": "images/canvas-sel.png", 
-        "iconPath": "images/canvas.png", 
+        "selectedIconPath": "images/canvas-sel.png",
+        "iconPath": "images/canvas.png",
         "text": "画布"
       }
     ]
   },
-  "subPackages": []
+  "subPackages":[{
+    "root": "subs/webviewDetail",
+    "pages": ["webviewDetail"]
+  }],
+  "sitemapLocation": "sitemap.json",
+  "usingComponents":{ 
+    "navigation": "/components/navigation/navigation"
+  },
+  "preloadRule":{
+    "pages/file/file": {
+      "packages": [
+        "subs/webviewDetail"
+      ]
+    }
+  }
 }

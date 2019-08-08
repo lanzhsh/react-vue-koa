@@ -1,0 +1,4 @@
+<navigation title="webviewDetail" back="{{true}}" home="{{true}}" />
+<view>
+  <web-view src="https://mp.weixin.qq.com/"></web-view>
+</view>

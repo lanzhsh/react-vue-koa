@@ -13,11 +13,13 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.3.0",
 	"appid": "wxab531518eb635e4b",
-	"projectname": "weui-lan",
+	"projectname": "mini-program-demo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

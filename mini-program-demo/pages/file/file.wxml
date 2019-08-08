@@ -51,4 +51,5 @@
   </view>
 
   <button open-type='contact'>自动回复标题</button>
+  <button bindtap='toWebviewDetail'>跳到 webview</button>
 </view>
