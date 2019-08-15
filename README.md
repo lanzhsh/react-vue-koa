@@ -19,4 +19,12 @@ vue-mobile：vue 的移动端端 demo
 vue-mobile-template：vue 的移动端端 template
 vue-pc-template：vue 的pc端 template
 vue-ts-template：vue+ts 的pc端 template
+code.segment.config：基于 vue-mobile 的 eslint 配置的用户代码片段
+ide.config.md：vscode 的插件和一些配置
+```
+
+### 其他
+```
+Eslint 配置规则在 vue-mobile 工程
+
 ```
