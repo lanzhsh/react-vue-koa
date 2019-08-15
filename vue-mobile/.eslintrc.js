@@ -21,6 +21,28 @@ module.exports = {
       }
     }],
     "vue/name-property-casing": ["error", "PascalCase"],
+    "vue/order-in-components": ["error", {
+      "order": [
+        "el",
+        "name",
+        "parent",
+        "functional",
+        ["delimiters", "comments"],
+        ["components", "directives", "filters"],
+        "extends",
+        "mixins",
+        "inheritAttrs",
+        "model",
+        ["props", "propsData"],
+        "data",
+        "computed",
+        "watch",
+        "LIFECYCLE_HOOKS",
+        "methods",
+        ["template", "render"],
+        "renderError"
+      ]
+    }],
     'accessor-pairs': 2,
     'arrow-spacing': [2, {
       'before': true,

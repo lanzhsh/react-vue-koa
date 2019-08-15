@@ -1,0 +1,108 @@
+{
+	"Print to absolute": {
+		"prefix": "absolute",
+		"body": [
+			"position: absolute;",
+  		"top:0;",
+  		"right:0;",
+  		"bottom: 0;",
+  		"left: 0;"
+		],
+		"description": "Absolute and top"
+	},
+	"Print to flex": {
+		"prefix": "flex",
+		"body": [
+			"dispaly:flex;",
+			"flex-direction:row;",
+			"justify-content:space-between;",
+			"align-items:center;"
+		],
+		"description": "Flex and align"
+	},
+	"Print to width": {
+		"prefix": "width",
+		"body": [
+			"width:$1wx;",
+			"height:$2wx;"
+		],
+		"description": "Width and height"
+	},
+	"Print to font": {
+		"prefix": "font",
+		"body": [
+			"line-height:$1wx;",
+			"font-size:$2wx;",
+			"color:#$3;"
+		],
+		"description": "Font color and line"
+	},
+	"Print to fontw": {
+		"prefix": "fontw",
+		"body": [
+			"font-weight:$1wx;"
+		],
+		"description": "Font weight"
+	},
+	"Print to boder": {
+		"prefix": "boder",
+		"body": [
+			"border-bottom-style:solid;",
+			"border-bottom-width:0.4wx;",
+			"border-bottom-color:#EEEEEE;",
+		],
+		"description": "Border style and color"
+	},
+	"Print to boder-r": {
+		"prefix": "boder-r",
+		"body": [
+			"border-radius:$1wx;"
+		],
+		"description": "Border and radius"
+	},
+	"Print to bgc": {
+		"prefix": "bgc",
+		"body": [
+			"background-color:#$1;"
+		],
+		"description": "Background and color"
+  },
+  "Print to bgi": {
+		"prefix": "bgi",
+		"body": [
+			"background-image:url('$1') center center no-repeat;"
+		],
+		"description": "Background and image"
+	},
+	"Print to wline2": {
+		"prefix": "line2",
+		"body": [
+			"text-overflow:ellipsis;",
+			"lines:2;"
+		],
+		"description": "WLine and 2"
+  },
+  "Print to line1": {
+		"prefix": "line1",
+		"body": [
+			"overflow:hidden;",
+      "white-space:nowrap;",
+      "text-overflow:ellipsis;"
+		],
+		"description": "Line and 1"
+  },
+  "Print to line2": {
+		"prefix": "line2",
+		"body": [
+			"overflow: hidden;",
+      "text-overflow: ellipsis;",
+      "display: -webkit-box;",
+      "-webkit-line-clamp: 2;",
+      "/*! autoprefixer: off */"
+      "-webkit-box-orient: vertical;",
+      "/*! autoprefixer: on */"
+		],
+		"description": "Line and 2"
+	}
+	
+}

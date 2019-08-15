@@ -13,19 +13,18 @@ import tabbar from '@/components/tabbar'
 export default {
   name: 'Home',
 
-  props: {},
-
   components: {
     headTop,
     tabbar
   },
+
+  props: {},
 
   data() {
     return {
 
     }
   },
-
   computed: {},
 
   watch: {},
@@ -37,15 +36,6 @@ export default {
   }
 }
 </script>
-<style lang='scss' scoped>
-.home-bgc {
-  // @include setBg('./img/banner.png', ptr(750), ptr(240));
-}
-// .swiper-container {
-//   width: ptr(750);
-//   height: ptr(400);
-// }
-// .swiper-slide {
-//   background-color: red;
-// }
+<style scoped>
+
 </style>

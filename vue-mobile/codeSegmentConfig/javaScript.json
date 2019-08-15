@@ -1,0 +1,210 @@
+{
+	"Print to console": {
+		"prefix": "console",
+		"body": [
+			"console.log(`$1值为${$2}`)"
+		],
+		"description": "Console and log"
+	},
+	"Print to switch": {
+		"prefix": "switch",
+		"body": [
+			"switch ($1) {",
+				"\tcase $2:",
+					"\t\t$3",
+					"\t\tbreak",
+				"\tdefault:",
+					"\t\t$4",
+					"\t\tbreak",
+			"}"
+		],
+		"description": "Switch and switch"
+	},
+	"Print to if": {
+		"prefix": "if",
+		"body": [
+			"if ($1) {",
+				"\t$2",
+			"}"
+		],
+		"description": "If and if"
+	},
+	"Print to forEach": {
+		"prefix": "forEach",
+		"body": [
+			"$1.forEach((item, index) => {",
+				"$2",
+			"})"
+		],
+		"description": "ForEach and forEach"
+	},
+	"Print to every": {
+		"prefix": "every",
+		"body": [
+			"return $1.every((item => {",
+				"$2",
+			"})"
+		],
+		"description": "Every and every"
+	},
+	"Print to some": {
+		"prefix": "some",
+		"body": [
+			"return $1.some((item => {",
+				"$2",
+			"})"
+		],
+		"description": "Some and some"
+	},
+	"Print to strj": {
+		"prefix": "strj",
+		"body": [
+			"const str = $1.slice($2)"
+		],
+		"description": "Strj and strj"
+	},
+	"Print to strt": {
+		"prefix": "strt",
+		"body": [
+			"const str = $1.replace(/-/g, $2)"
+		],
+		"description": "Strt and strt"
+	},
+	"Print to push": {
+		"prefix": "push",
+		"body": [
+			"const arr = $1.push($2)"
+		],
+		"description": "Push and push"
+	},
+	"Print to async": {
+		"prefix": "async",
+		"body": [
+			"async ()=> {",
+				"\t await $1",
+			"}"
+		],
+		"description": "Async and async"
+	},
+	"Print to fun": {
+		"prefix": "fun",
+		"body": [
+			"fun() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Fun and fun"
+	},
+	"Print to importc": {
+		"prefix": "importc",
+		"body": [
+			"import $2 from '@/components/$1/$2'",
+		],
+		"description": "Import and components"
+	},
+	"Print to importa": {
+		"prefix": "importa",
+		"body": [
+			"import {$3} from '@/api/$1/$2'",
+		],
+		"description": "Import and api"
+	},
+	"Print to importj": {
+		"prefix": "importj",
+		"body": [
+			"import jtBridge from '@/utils/jtBridge'",
+		],
+		"description": "Import and jtBridge"
+	},
+	"Print to components": {
+		"prefix": "components",
+		"body": [
+			"components: {",
+				"\t$1",
+			"},"
+		],
+		"description": "Components and regs"
+	},
+	"Print to props": {
+		"prefix": "props",
+		"body": [
+			"props: {",
+				"\t$1: {",
+				"\t\ttype: $2,",
+				"\t\tdefault: $3",
+				"\t}",
+			"},"
+		],
+		"description": "Props and type"
+	},
+	"Print to computed": {
+		"prefix": "computed",
+		"body": [
+			"computed: {",
+				"\t$1() {",
+				"\t\treturn: $2",
+				"\t}",
+			"},"
+		],
+		"description": "Computed and computed"
+	},
+	"Print to watchs": {
+		"prefix": "watchs",
+		"body": [
+			"watch: {",
+				"\t$1(val) {",
+				"\t\t$2",
+				"\t}",
+			"},"
+		],
+		"description": "Watch and simple"
+	},
+	"Print to watchd": {
+		"prefix": "watchd",
+		"body": [
+			"watch: {",
+				"\t$1: {",
+				"\t\thandler(oldVal,newVal) {",
+					"\t\t\t$2",
+				"\t\t}",
+				"\t\tdeep:true",
+				"\t}",
+			"},"
+		],
+		"description": "Watch and deep"
+	},
+	"Print to mounted": {
+		"prefix": "mounted",
+		"body": [
+			"mounted() {",
+				"\t$1",
+			"},"
+		],
+		"description": "Mounted and mounted"
+	},
+	"Print to jtn": {
+		"prefix": "jtn",
+		"body": [
+			"jtBridge.navigateTo('$1'",
+				"{$2}",
+			")"
+		],
+		"description": "jtBridge and navigateTo"
+	},
+	"Print to jtt": {
+		"prefix": "jtt",
+		"body": [
+			"jtBridge.setNavigationTitle({",
+				"\tnavigationBarTitle: '$1'",
+			"})"
+		],
+		"description": "jtBridge and setTitle"
+	},
+	"Print to jtw": {
+		"prefix": "jtw",
+		"body": [
+			"jtBridge.wxDeviceWidth - $1"
+		],
+		"description": "jtBridge and width"
+	}
+}

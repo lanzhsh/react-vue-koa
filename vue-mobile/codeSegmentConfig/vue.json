@@ -1,0 +1,26 @@
+{
+  "Print to template": {
+		"prefix": "template",
+		"body": [
+			"<template>",
+				"\t<div>",
+				"\t</div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default{",
+				"\tname:,",
+				"\tdata(){",
+					"\t\treturn{}",
+				"\t},",
+				"\tmethods:{",
+				"\t}",
+			"}",
+			"</script>",
+			"",
+			"<style lang='scss' scoped>",
+			"</style>"
+		],
+		"description": "template output to template"
+	}
+}
