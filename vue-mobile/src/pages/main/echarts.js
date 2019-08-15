@@ -51,8 +51,8 @@ export function drawpie(configData) {
         name: '访问来源',
         type: 'pie',
         radius: ['20%', '45%'],
-        minAngle: 60, // 最小角度
-        startAngle: 270, // 起始角度
+        // minAngle: 60, // 设置最小角度会有 bug
+        // startAngle: 270, // 起始角度
         avoidLabelOverlap: true, // 是否启用防止标签重叠策略
         center: ['50%', '50%'],
         data: seriesData,
