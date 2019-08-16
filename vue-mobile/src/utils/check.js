@@ -1,55 +1,4 @@
-﻿const dateToFormat = date => {
-  date
-    .toLocaleString('en-US', {
-      hour12: false
-    })
-    .replace(/\b\d\b/g, '0$&')
-    .replace(new RegExp('/', 'gm'), '-')
-}
-const forMatToDate = date => {
-  const dateArr = date.split(':')
-  return new Date(2017, 10, 19, dateArr[0], dateArr[1], dateArr[2])
-}
-const obtainNowDate = () => {
-  const date = new Date()
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hours = date.getHours()
-  const minu = date.getMinutes()
-  const second = date.getSeconds()
-  const arr = [month, day, hours, minu, second]
-  arr.forEach(item => {
-    item < 10 ? '0' + item : item
-  })
-  return (
-    year +
-    '-' +
-    arr[0] +
-    '-' +
-    arr[1] +
-    ' ' +
-    arr[2] +
-    ':' +
-    arr[3] +
-    ':' +
-    arr[4]
-  )
-}
-const returnTimestamp = strTime => {
-  const middleDate = new Date(Number(strTime))
-  return middleDate
-    .toLocaleString('zh-CN', {
-      hour12: false
-    })
-    .replace(/\b\d\b/g, '0$&')
-    .replace(new RegExp('/', 'gm'), '-')
-}
-const compareOneLessTwo = (dateOne, dateTwo) => {
-  return (
-    Number(dateOne.replace(/\-/g, '')) < Number(dateTwo.replace(/\-/g, ''))
-  )
-}
+﻿
 const judgeArr = arr => {
   if (Array.isArray(arr)) {
     return true
@@ -106,11 +55,6 @@ const checkAgent = () => {
   return Agent
 }
 export {
-  dateToFormat,
-  forMatToDate,
-  obtainNowDate,
-  returnTimestamp,
-  compareOneLessTwo,
   judgeArr,
   removeRepeatArr,
   orderAscendArr,

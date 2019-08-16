@@ -1,0 +1,59 @@
+{
+	// 小程序
+	"Print to view": {
+		"prefix": "view",
+		"body": [
+			"<view class='$1'></view>"
+		],
+		"description": "Wx and view"
+	},
+	"Print to viewb": {
+		"prefix": "viewb",
+		"body": [
+			"<view class='$1' bindtap='$2'></view>"
+		],
+		"description": "Wx and view bindtap"
+	},
+	"Print to viewf": {
+		"prefix": "viewf",
+		"body": [
+			"<view class='$1' wx:for='{{$2}}'  wx:key='index'></view>"
+		],
+		"description": "Wx and view for"
+	},
+	"Print to text": {
+		"prefix": "text",
+		"body": [
+			"<text class='$1'></text>"
+		],
+		"description": "Wx and text"
+	},
+	"Print to textb": {
+		"prefix": "textb",
+		"body": [
+			"<text class='$1' bindtap='$2'></text>"
+		],
+		"description": "Wx and text bindtap"
+	},
+	"Print to textf": {
+		"prefix": "textf",
+		"body": [
+			"<text class='$1' wx:for='{{$2}}'  wx:key='index'></text>"
+		],
+		"description": "Wx and text for"
+	},
+	"Print to img": {
+		"prefix": "img",
+		"body": [
+			"<image class='$1' src='$2'/>"
+		],
+		"description": "Wx and img"
+	},
+	"Print to imgb": {
+		"prefix": "imgb",
+		"body": [
+			"<image class='$1' src='$2' bindtap='$3'/>"
+		],
+		"description": "Wx and img bindtap"
+	}
+}

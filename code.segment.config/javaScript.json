@@ -1,10 +1,11 @@
 {
+	// JS
 	"Print to console": {
 		"prefix": "console",
 		"body": [
 			"console.log(`$1值为${$2}`)"
 		],
-		"description": "Console and log"
+		"description": "JS and console"
 	},
 	"Print to switch": {
 		"prefix": "switch",
@@ -18,7 +19,7 @@
 					"\t\tbreak",
 			"}"
 		],
-		"description": "Switch and switch"
+		"description": "JS and switch"
 	},
 	"Print to if": {
 		"prefix": "if",
@@ -27,7 +28,7 @@
 				"\t$2",
 			"}"
 		],
-		"description": "If and if"
+		"description": "JS and if"
 	},
 	"Print to forEach": {
 		"prefix": "forEach",
@@ -36,7 +37,7 @@
 				"$2",
 			"})"
 		],
-		"description": "ForEach and forEach"
+		"description": "JS and forEach"
 	},
 	"Print to every": {
 		"prefix": "every",
@@ -45,7 +46,7 @@
 				"$2",
 			"})"
 		],
-		"description": "Every and every"
+		"description": "JS and every"
 	},
 	"Print to some": {
 		"prefix": "some",
@@ -54,28 +55,28 @@
 				"$2",
 			"})"
 		],
-		"description": "Some and some"
+		"description": "JS and some"
 	},
 	"Print to strj": {
 		"prefix": "strj",
 		"body": [
 			"const str = $1.slice($2)"
 		],
-		"description": "Strj and strj"
+		"description": "JS and strj"
 	},
 	"Print to strt": {
 		"prefix": "strt",
 		"body": [
 			"const str = $1.replace(/-/g, $2)"
 		],
-		"description": "Strt and strt"
+		"description": "JS and strt"
 	},
 	"Print to push": {
 		"prefix": "push",
 		"body": [
 			"const arr = $1.push($2)"
 		],
-		"description": "Push and push"
+		"description": "JS and push"
 	},
 	"Print to async": {
 		"prefix": "async",
@@ -84,17 +85,28 @@
 				"\t await $1",
 			"}"
 		],
-		"description": "Async and async"
+		"description": "JS and async"
 	},
 	"Print to fun": {
 		"prefix": "fun",
 		"body": [
-			"fun() {",
-			"\t$1",
+			"$1() {",
+			"\t$2",
 			"},"
 		],
-		"description": "Fun and fun"
+		"description": "JS and fun"
 	},
+	"Print to setTimeOut": {
+		"prefix": "setTimeOut",
+		"body": [
+			"setTimeout(() => {",
+				"\t$1",
+			"}, 800)"
+		],
+		"description": "JS and setTimeOut"
+	},
+
+	// import
 	"Print to importc": {
 		"prefix": "importc",
 		"body": [
@@ -116,6 +128,8 @@
 		],
 		"description": "Import and jtBridge"
 	},
+
+	// vue
 	"Print to components": {
 		"prefix": "components",
 		"body": [
@@ -123,7 +137,7 @@
 				"\t$1",
 			"},"
 		],
-		"description": "Components and regs"
+		"description": "Vue and components"
 	},
 	"Print to props": {
 		"prefix": "props",
@@ -135,7 +149,7 @@
 				"\t}",
 			"},"
 		],
-		"description": "Props and type"
+		"description": "Vue and type"
 	},
 	"Print to computed": {
 		"prefix": "computed",
@@ -146,7 +160,7 @@
 				"\t}",
 			"},"
 		],
-		"description": "Computed and computed"
+		"description": "Vue and computed"
 	},
 	"Print to watchs": {
 		"prefix": "watchs",
@@ -157,7 +171,7 @@
 				"\t}",
 			"},"
 		],
-		"description": "Watch and simple"
+		"description": "Vue and watch simple"
 	},
 	"Print to watchd": {
 		"prefix": "watchd",
@@ -171,7 +185,7 @@
 				"\t}",
 			"},"
 		],
-		"description": "Watch and deep"
+		"description": "Vue and watch deep"
 	},
 	"Print to mounted": {
 		"prefix": "mounted",
@@ -180,8 +194,10 @@
 				"\t$1",
 			"},"
 		],
-		"description": "Mounted and mounted"
+		"description": "Vue and mounted"
 	},
+
+	// weex
 	"Print to jtn": {
 		"prefix": "jtn",
 		"body": [
@@ -189,7 +205,7 @@
 				"{$2}",
 			")"
 		],
-		"description": "jtBridge and navigateTo"
+		"description": "weex and jtBridge navigateTo"
 	},
 	"Print to jtt": {
 		"prefix": "jtt",
@@ -198,13 +214,52 @@
 				"\tnavigationBarTitle: '$1'",
 			"})"
 		],
-		"description": "jtBridge and setTitle"
+		"description": "weex and jtBridge setTitle"
 	},
 	"Print to jtw": {
 		"prefix": "jtw",
 		"body": [
 			"jtBridge.wxDeviceWidth - $1"
 		],
-		"description": "jtBridge and width"
+		"description": "weex andjtBridge width"
+	},
+
+	// 小程序
+	"Print to wxl": {
+		"prefix": "wxl",
+		"body": [
+			"onLoad() {",
+				"\t$1",
+			"},"
+		],
+		"description": "wx and load"
+	},
+	"Print to wxn": {
+		"prefix": "wxn",
+		"body": [
+			"wx.navigateTo({",
+				"\turl:`$1`",
+			"})"
+		],
+		"description": "wx and navigateTo"
+	},
+	"Print to wxp": {
+		"prefix": "wxp",
+		"body": [
+			"onPullDownRefresh() {",
+				"\t$1",
+			"},"
+		],
+		"description": "wx and pullDownRefresh"
+	},
+	"Print to wxr": {
+		"prefix": "wxr",
+		"body": [
+			"onReachBottom() {",
+				"\t$1",
+			"},"
+		],
+		"description": "wx and onReachBottom"
 	}
+	
 }
