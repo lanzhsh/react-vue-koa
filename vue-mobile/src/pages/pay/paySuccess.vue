@@ -28,6 +28,10 @@ export default {
   components: {
   },
 
+  data() {
+    return {}
+  },
+
   mounted() {
     const productType = this.$route.params.productType
     if (productType === 'TEACHER_CARD') {
@@ -52,10 +56,6 @@ export default {
         }, 500)
       }, 2000)
     }
-  },
-
-  data() {
-    return {}
   },
   methods: {
   }

@@ -17,6 +17,7 @@ react-pc-template：react 的 pc端 template
 vue-demo：vue 的 pc 端 demo
 vue-mobile：vue 的移动端端 demo
 vue-mobile-template：vue 的移动端端 template
+vue-multi-demo: vue 的 pc 端多页面 demo
 vue-pc-template：vue 的pc端 template
 vue-ts-template：vue+ts 的pc端 template
 code.segment.config：基于 vue-mobile 的 eslint 配置的用户代码片段

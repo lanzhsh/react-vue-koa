@@ -8,9 +8,12 @@ import axios from 'axios'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import VueScroller from 'vue-scroller'
+import NutUI from '@nutui/nutui'
+import '@nutui/nutui/dist/nutui.css'
 
 Vue.use(Vant)
 Vue.use(VueScroller)
+NutUI.install(Vue)
 
 Vue.config.productionTip = false
 

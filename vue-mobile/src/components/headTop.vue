@@ -25,6 +25,10 @@ export default {
     }
   },
 
+  data() {
+    return {}
+  },
+
   computed: {
     ...mapGetters({
       tabIndex: 'allTabIndex'
@@ -33,10 +37,6 @@ export default {
       const arrText = ['首页', '分类', '商品', '购物车', '我的']
       return arrText[this.tabIndex]
     }
-  },
-
-  data() {
-    return {}
   },
 
   methods: {

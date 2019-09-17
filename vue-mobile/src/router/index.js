@@ -20,9 +20,9 @@ export default new Router({
           meta: { keepAlive: true }
         },
         {
-          path: '/classify',
-          name: 'Classify',
-          component: () => import('@/pages/classify/classify.vue'),
+          path: '/activity-detail',
+          name: 'ActivityDetail',
+          component: () => import('@/pages/activityDetail/activityDetail.vue'),
           meta: { keepAlive: true }
         },
         {

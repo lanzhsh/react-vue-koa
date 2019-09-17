@@ -5,7 +5,7 @@
       <span class="iconfont icon-home"></span><p>首页</p>
     </li>
     <li @click="tabChange(1)" :class="{'active':tabActive[1]}">
-      <span class="iconfont icon-classifi"></span><p>分类</p>
+      <span class="iconfont icon-classifi"></span><p>活动</p>
     </li>
     <li @click="tabChange(2)" :class="{'active':tabActive[2]}">
       <span class="iconfont icon-product"></span><p>商品</p>
@@ -26,16 +26,16 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'Tabbar',
 
-  computed: {
-    ...mapGetters({
-      tabIndex: 'allTabIndex'
-    })
-  },
-
   data() {
     return {
       tabActive: [true, false, false, false, false]
     }
+  },
+
+  computed: {
+    ...mapGetters({
+      tabIndex: 'allTabIndex'
+    })
   },
 
   created() {
@@ -61,7 +61,7 @@ export default {
 
     // 切换tabbar
     switchTab(activeIndex) {
-      const arrUrl = ['main', 'classify', 'product', 'shopcart', 'my']
+      const arrUrl = ['main', 'activity-detail', 'product', 'shopcart', 'my']
       arrUrl.map((item, index) => {
         if (index === activeIndex) this.$router.push('/' + item)
       })
