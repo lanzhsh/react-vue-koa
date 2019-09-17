@@ -27,5 +27,6 @@ ide.config.md：vscode 的插件和一些配置
 ### 其他
 ```
 Eslint 配置规则在 vue-mobile 工程
+工具类在 vue-mobile 下的 utils
 
 ```

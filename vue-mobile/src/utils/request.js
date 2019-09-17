@@ -3,7 +3,7 @@ import baseUrl from './config/index'
 
 // 设置axios拦截器
 axios.interceptors.request.use(config => {
-  config.headers.cityCode = window.sessionStorage.cityCode // jsCookie.get('cityCode')
+  config.headers.token = sessionStorage.token // jsCookie.get('cityCode')
   return config
 })
 axios.interceptors.response.use((response) => {
@@ -11,32 +11,25 @@ axios.interceptors.response.use((response) => {
   return response.data
 })
 
-function request({
-  url,
-  method = 'POST',
-  data = {},
-  header,
-  params,
-  ...param
-}) {
-  const token = sessionStorage.getItem('token') || ''
-  return new Promise((resolve, reject) => {
-    axios({
-      baseURL: baseUrl,
-      url,
-      method,
-      headers: {
-        'i-manage-token': token,
-        'X-Requested-With': 'XMLHttpRequest',
-        withCredentials: true
-      },
-      data,
-      params,
-      timeOut: 10000, // 配置超时10s
-      ...param
-    }).then(res => {
-      resolve(res)
-    })
+// axios默认配置
+axios.defaults.timeout = 10000 // 超时时间
+axios.defaults.baseURL = baseUrl // 默认地址
+
+export const get = (url, params, options) => {
+  return axios({
+    method: 'get',
+    url,
+    params,
+    ...options
+  })
+}
+
+export const post = (url, data, options) => {
+  return axios({
+    method: 'post',
+    url,
+    data,
+    ...options
   })
 }
 
