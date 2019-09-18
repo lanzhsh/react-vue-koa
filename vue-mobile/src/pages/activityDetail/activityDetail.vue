@@ -203,6 +203,9 @@ export default{
 <style lang='scss'>
 .activity-detail{
   padding:0 .24rem .43rem;
+  input,textarea{
+    font-size:.16rem;
+  }
   .activity-bottom{
     padding-top:.08rem;
     .bottom-info{

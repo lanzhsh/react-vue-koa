@@ -4,8 +4,9 @@
       <div :class="['two-title',{'text-req':valT.required}]">{{valT.tip}}</div>
       <input class="text-inp inp" type="text" v-model="valT.value"/>
       <div class="tel-valid" v-show="valT.validType">
-        <input class="code-inp inp" type="text" v-model="code"/>
-        <div class="code-btn">获取验证码</div>
+        <input class="code-inp inp" type="number" v-model="valT.code" placeholder=""/>
+        <div class="code-btn" @click="handleSendSMS" v-if="this.countDownText==='获取验证码'">{{countDownText}}</div>
+        <div class="code-btn" @click="handleSendSMS" v-else>{{countDownText}}</div>
       </div>
       <p v-if="check&&!valT.value&&valT.required" class="required-field">{{valT.tip}}必填</p>
       <p v-if="check&&!code&&valT.validType" class="required-field">验证码必填</p>
@@ -26,10 +27,38 @@ export default {
     return {
       valT: this.val,
       check: false,
-      code: ''
+      code: '',
+      countDownSec: ''
     }
   },
-  methods: {}
+  computed: {
+    countDownText() {
+      return this.countDownSec <= 0 ? '获取验证码' : this.countDownSec + 'S' + '再发送'
+    }
+  },
+  methods: {
+    // 发送验证短信
+    handleSendSMS() {
+      if (this.countDownSec) {
+        return
+      }
+      this.countDown()
+    },
+    countDown() {
+      const me = this
+      me.countDownSec = 60
+      let timer = null
+      function t() {
+        if (me.countDownSec <= 0) {
+          clearTimeout(timer)
+        } else {
+          me.countDownSec--
+          timer = setTimeout(t, 1000)
+        }
+      }
+      timer = setTimeout(t, 1000)
+    }
+  }
 }
 </script>
 
