@@ -29,3 +29,18 @@ export const trimLeftOrRight = str => {
   return str.replace(/(^s)|(s$)/g, '')
 }
 
+/**
+ * 判断是否是正确的网址
+ * @param {String} url 网址
+ */
+export const judgeUrl = url => {
+  const a = document.createElement('a')
+  a.href = url
+  return [
+    /^(http|https):$/.test(a.protocol),
+    a.host,
+    a.pathname !== url,
+    a.pathname !== `/${url}`
+  ].find(x => !x) === undefined
+}
+
