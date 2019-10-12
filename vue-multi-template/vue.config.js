@@ -16,5 +16,18 @@ function getEntry(url) {
 }
 let pages = getEntry('./src/pages/**?/*.html')
 module.exports = {
-  pages
+  pages,
+  chainWebpack: config => {
+    config
+      .module
+        .rule('vue')
+        .use('vue-loader')
+        .loader('vue-loader')
+        .tap(options => {
+      options.transformAssetUrls = {
+        Test: 'img-src',
+      }
+      return options;
+      });
+  }
 }
