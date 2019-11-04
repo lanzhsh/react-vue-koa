@@ -1,0 +1,9 @@
+node_modules
+dist
+package-lock.json
+func-test/www
+*.sw*
+*.un~
+config.local.js
+yarn.lock
+

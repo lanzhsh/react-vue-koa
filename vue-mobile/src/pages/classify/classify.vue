@@ -11,7 +11,7 @@
     origin-price="10.00"
     v-for="(item,index) in classifyList"
     :key="index"
-    >
+>
     <div slot="footer">
       <van-button size="mini">按钮</van-button>
       <van-button size="mini">按钮</van-button>

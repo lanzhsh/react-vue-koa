@@ -13,7 +13,9 @@ mini-program-demo：小程序 demo
 mini-program-template：小程序 template
 react-koa：react+koa 的全栈demo
 react-mobile：react 的移动端 demo
+dva-umi-template：dva和umi 的 pc端 template
 react-pc-template：react 的 pc端 template
+react-pc-skill：react 的 pc端技巧整理
 vue-demo：vue 的 pc 端 demo
 vue-mobile：vue 的移动端端 demo
 vue-mobile-template：vue 的移动端端 template
