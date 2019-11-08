@@ -64,8 +64,6 @@ class User extends React.Component {
         const defaultOpenKeys = filterRoutes(path)
         
         const breadList = recursionRouterTwo(defaultOpenKeys,permissionList)
-        console.log('permissionList值为')
-        console.log(permissionList)
         return (
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>

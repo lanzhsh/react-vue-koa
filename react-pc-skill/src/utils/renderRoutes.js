@@ -11,7 +11,6 @@ const renderRoutes = (routes, authed, authPath = '/login', extraProps = {}, swit
 				render={(props) => {
 					//如果是不需要权限 或者 已登录 或者 访问路径是/login，则直接返回当前组件
 					if (!route.requiresAuth || authed || route.path === authPath) {
-						console.log(route)
 						return <route.component {...props} {...extraProps} route={route} />
 					}
 					//否则重定向到/login
