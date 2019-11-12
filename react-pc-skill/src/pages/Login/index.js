@@ -64,7 +64,7 @@ class NormalLoginForm extends React.Component {
                         </Button>
                     </Form.Item>
                     <Form.Item>
-                        <div className="loginTip">用户为admin的时候，能够看到所有的权限列表，其余账号只能看到部分</div>
+                        <div className="loginTip">登录账号密码为任意值</div>
                     </Form.Item>
                 </Form>
             </div>
