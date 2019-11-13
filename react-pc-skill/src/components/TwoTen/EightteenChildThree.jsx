@@ -1,8 +1,8 @@
 import React, {  useEffect, useContext } from 'react';
 import {Button} from 'antd'
 
-import {onChangeCount} from '../../pages/TwoTen/store/action';
-import { ExampleContext } from '../../pages/TwoTen/eighteen';
+import {onChangeCount} from '../../pages/OneTen/store/action';
+import { ExampleContext } from '../../pages/OneTen/one';
 
 const Example = () => {
 

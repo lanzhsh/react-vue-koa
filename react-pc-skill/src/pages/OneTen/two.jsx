@@ -1,29 +1,10 @@
-import React from "react";
+import React from 'react'
 
-export default class Two extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      arr:[
-        {name:'曹操',age:26},
-        {name:'张飞',age:26},
-        {name:'貂蝉',age:26}
-      ]
-    }
-  }  
-  render() {
-    const {arr} =this.state
-    return (
-      <div>
-        {arr.map((item,index)=>{
-          return(
-          <div key={index}>
-            <span>{item.name}</span>
-            <span>{item.age}</span>
-          </div>
-          )
-        })}
-      </div>
-    );
+export default class ThirtyOne extends React.Component{
+
+  render(){
+      return (
+          <div>这是技巧2,require.context的使用详见 router.js</div>
+      )
   }
 }

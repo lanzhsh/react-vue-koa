@@ -1,18 +1,20 @@
-import React from 'react'
-import Test from '../../utils/decorators'
+import React from "react";
+import { Button } from 'antd'
 
-@Test
-
-class TwentyNine extends React.Component{
-    componentDidMount(){
-        console.log(this,'decorator.js') // 这里的this是类的一个实例
-        console.log(this.testable)
-    }
-    render(){
-        return (
-            <div>这是技巧23</div>
-        )
-    }
+export default class Three extends React.Component {
+  state = {
+    flag: true,
+    flagOne: 1
+  };
+  click(data1,data2){
+    console.log('data1 值为',data1)
+    console.log('data2 值为',data2)
+  }
+  render() {
+    return (
+      <div>
+        <Button type="primary" onClick={this.click.bind(this,'参数 1','参数 2')}>点击事件</Button>
+      </div>
+    );
+  }
 }
-
-export default TwentyNine
