@@ -3,7 +3,7 @@
  * 判断是否是数组
  * @param {Array}} arr 数组
  */
-export const judgeArr = arr => {
+export const arrJudge = arr => {
   if (Array.isArray(arr)) {
     return true
   }
@@ -13,7 +13,7 @@ export const judgeArr = arr => {
  * 数组去重
  * @param {Array} arr  数组
  */
-export const removeRepeatArr = arr => {
+export const arrRemoveRepeat = arr => {
   return Array.from(new Set(arr))
 }
 
@@ -22,7 +22,7 @@ export const removeRepeatArr = arr => {
  * @param {Array} arr  数组
  * @param {Boolean} ascendFlag   升序
  */
-export const orderAscendArr = (arr, ascendFlag) => {
+export const arrOrderAscend = (arr, ascendFlag) => {
   arr.sort((a, b) => {
     return ascendFlag ? a - b : b - a
   })
@@ -32,7 +32,7 @@ export const orderAscendArr = (arr, ascendFlag) => {
  * 数组最大值
  * @param {Array} arr  数组
  */
-export const maxArr = arr => {
+export const arrMax = arr => {
   return Math.max(...arr)
 }
 
@@ -40,7 +40,7 @@ export const maxArr = arr => {
  * 数组求和
  * @param {Array} arr 数组
  */
-export const sumArr = arr => {
+export const arrSum = arr => {
   arr.reduce(function(prev, cur) {
     return prev + cur
   }, 0)
