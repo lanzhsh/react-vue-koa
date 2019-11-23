@@ -24,6 +24,7 @@ vue-pc-template：vue 的pc端 template
 vue-ts-template：vue+ts 的pc端 template
 code.segment.config：基于 vue-mobile 的 eslint 配置的用户代码片段
 ide.config.md：vscode 的插件和一些配置
+utils-lan: 工具类
 ```
 
 ### 其他
