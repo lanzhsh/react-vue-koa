@@ -1,5 +1,5 @@
 /**
- *  转化文件 kb 为 MB
+ * 格式化文件单位
  * @param {String || Number} size  文件大小(kb)
  */
 export const fileFormatSize = size => {

@@ -6,10 +6,10 @@ export const getYear = () => {
 }
 
 /**
- * 获取月份,会补 0
- * @param {Boolean} fillFlag 布尔值,是否补 0
+ * 获取当前月份
+ * @param {Boolean} fillFlag 布尔值,是否补 0,默认为 true
  */
-export const getMonth = (fillFlag) => {
+export const getMonth = (fillFlag=true) => {
   const mon = new Date().getMonth() + 1
   const monRe = mon
   if (fillFlag) mon < 10 ? `0${mon}` : mon
@@ -20,11 +20,18 @@ export const getMonth = (fillFlag) => {
  * 获取日
  * @param {Boolean} fillFlag 布尔值,是否补 0
  */
-export const getDay = (fillFlag) => {
+export const getDay = (fillFlag=true) => {
   const day = new Date().getDate()
   const dayRe = day
   if (fillFlag) day < 10 ? `0${day}` : day
   return dayRe
+}
+
+/**
+ * 获取星期几
+ */
+export const getWhatDay = () => {
+  return new Date().getDay() ? new Date().getDay() : 7
 }
 
 /**
@@ -35,13 +42,6 @@ export const getDay = (fillFlag) => {
 export const getMonthNum = (year, month) => {
   var d = new Date(year, month, 0)
   return d.getDate()
-}
-
-/**
- * 获取星期几
- */
-export const getWhatDay = () => {
-  return new Date().getDay() ? new Date().getDay() : 7
 }
 
 /**
@@ -74,14 +74,18 @@ export const getYyMmDdHhMmSs = () => {
   )
 }
 
+function getzf(time){
+  return +time<10?`0${time}`:time
+}
+
 /**
  * 时间戳转化为年月日
- * @param ymd 格式类型(yyyy-mm-dd,yyyy/mm/dd)
  * @param times 时间戳
+ * @param ymd 格式类型(yyyy-mm-dd,yyyy/mm/dd)
  * @param hms 可选,格式类型(hh,hh:mm,hh:mm:ss)
  * @returns {年月日}
  */
-export const timesToYyMmDd = (ymd, times, hms) => {
+export const timesToYyMmDd = (times, ymd,  hms) => {
   const oDate = new Date(times)
   const oYear = oDate.getFullYear()
   const oMonth = oDate.getMonth() + 1
@@ -102,7 +106,7 @@ export const timesToYyMmDd = (ymd, times, hms) => {
   // 时分秒格式
   switch (hms) {
     case 'hh':
-      oTime = oTime + getzf(oHour)
+      oTime = ' '+oTime + getzf(oHour)
       break
     case 'hh:mm':
       oTime = oTime + getzf(oHour) + ':' + getzf(oMin)
@@ -127,8 +131,7 @@ export const YyMmDdToTimes = (time) => {
  * @param {String} timeOne  时间 1
  * @param {String} timeTwo  时间 2
  */
-export const compareOneLessTwo = (timeOne, timeTwo) => {
-  return (
-    Number(timeOne.replace(/\-/g, '')) < Number(timeTwo.replace(/\-/g, ''))
-  )
+export const compareTimeOneLessTwo = (timeOne, timeTwo) => {
+  // 判断 timeOne 和 timeTwo 是否
+  return new Date(timeOne.replace(/-/g, '/')).getTime()<new Date(timeTwo.replace(/-/g, '/')).getTime()
 }

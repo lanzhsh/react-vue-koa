@@ -3,7 +3,7 @@
  * @param {String} str 字符
  */
 export const strTrimLeftOrRight = str => {
-  return str.replace(/(^s)|(s$)/g, '')
+  return str.replace(/(^\s*)|(\s*$)/g, "")
 }
 
 /**
@@ -31,7 +31,7 @@ export const strBeginWith = (str, value) => {
  * @param {String} valueTwo 要替换的字符,选填
  */
 export const strReplace = (str, valueOne, valueTwo) => {
-  return str.replace(`/${valueOne}/g`, valueTwo)
+  return str.replace(new RegExp(valueOne,'g'), valueTwo)
 }
 
 /**

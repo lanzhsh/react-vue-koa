@@ -4,7 +4,7 @@
  */
 export const checkNum = data => {
   const reg = /^\d{1,}$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -13,16 +13,16 @@ export const checkNum = data => {
  */
 export const checkLetter = data => {
   const reg = /^[a-zA-Z]+$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
- *  判断是否是小写字母
+ *  判断是否全部是小写字母
  * @param {Number} data
  */
 export const checkLowercaseLetter = data => {
   const reg = /^[a-z]+$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -31,7 +31,7 @@ export const checkLowercaseLetter = data => {
  */
 export const checkCapitalLetter = data => {
   const reg = /^[A-Z]+$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -40,7 +40,7 @@ export const checkCapitalLetter = data => {
  */
 export const checkNumOrLetter = data => {
   const reg = /^[0-9a-zA-Z]*$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -49,7 +49,7 @@ export const checkNumOrLetter = data => {
  */
 export const checkChinese = data => {
   const reg = /^[\u4E00-\u9FA5]+$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -58,7 +58,7 @@ export const checkChinese = data => {
  */
 export const checkChineseNumberLettter = data => {
   const reg = /^[a-zA-Z0-9\u4e00-\u9fa5]+$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -67,7 +67,7 @@ export const checkChineseNumberLettter = data => {
  */
 export const checkEmail = data => {
   const reg = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**
@@ -76,7 +76,7 @@ export const checkEmail = data => {
  */
 export const checkTelphone = data => {
   const reg = /^((\+|00)86)?1[3-9]\d{9}$/g
-  if (reg.test(data)) true
+  if (reg.test(data)) return true
 }
 
 /**

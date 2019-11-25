@@ -1,5 +1,6 @@
 /**
  * localStorage 存贮
+ * 目前对象值如果是函数 、RegExp等特殊对象存贮会被忽略
  * @param {String} key  属性
  * @param {Object} value 值
  */
@@ -17,7 +18,7 @@ export const localStorageGet = (key) => {
 }
 
 /**
- * localStorage 获取
+ * localStorage 移除
  * @param {String} key  属性
  */
 export const localStorageRemove = (key) => {
@@ -42,9 +43,9 @@ export const localStorageSetExpire = (key, value, expire) => {
  * sessionStorage 存贮
  * @param {String} key  属性
  * @param {*} value 值
- * @param {Object} expire 值
  */
-export const sessionStorageSet = (key, value, expire) => {
+export const sessionStorageSet = (key, value) => {
+  if (typeof (value) === 'object') value = JSON.stringify(value)
   sessionStorage.setItem(key, value)
 }
 
@@ -53,7 +54,7 @@ export const sessionStorageSet = (key, value, expire) => {
  * @param {String} key  属性
  */
 export const sessionStorageGet = (key) => {
-  sessionStorage.getItem(key)
+  return JSON.parse(sessionStorage.getItem(key))
 }
 
 /**

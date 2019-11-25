@@ -1,5 +1,5 @@
 /**
- * 判断两个对象是否相等
+ * 判断两个对象是否相等,目前只支持对象值为简单数据类型的判断
  * @param {Object} oneObj  对象
  * @param {Object} twoObj 对象
  */
@@ -13,11 +13,32 @@ export const objIsEqual = (oneObj, twoObj) => {
  * 无法对函数 、RegExp等特殊对象的克隆,
  * 会抛弃对象的constructor,所有的构造函数会指向Object
  * 对象有循环引用,会报错
- * @param {Object} parent 克隆的对象
+ * @param {Object}  obj 克隆的对象
  */
-export const objDeepClone = parent => {
-  return clone(parent)
+export const objDeepClone = obj => {
+  return clone(obj)
 }
+
+const isType = (obj, type) => {
+  if (typeof obj !== 'object') return false;
+  // 判断数据类型的经典方法：
+  const typeString = Object.prototype.toString.call(obj);
+  let flag;
+  switch (type) {
+    case 'Array':
+      flag = typeString === '[object Array]';
+      break;
+    case 'Date':
+      flag = typeString === '[object Date]';
+      break;
+    case 'RegExp':
+      flag = typeString === '[object RegExp]';
+      break;
+    default:
+      flag = false;
+  }
+  return flag;
+};
 
 /**
 * deep clone

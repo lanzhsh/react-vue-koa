@@ -20,10 +20,10 @@ export const arrRemoveRepeat = arr => {
 /**
  * 数组排序
  * @param {Array} arr  数组
- * @param {Boolean} ascendFlag   升序
+ * @param {Boolean} ascendFlag   升序,默认为 true
  */
-export const arrOrderAscend = (arr, ascendFlag) => {
-  arr.sort((a, b) => {
+export const arrOrderAscend = (arr, ascendFlag=true) => {
+  return arr.sort((a, b) => {
     return ascendFlag ? a - b : b - a
   })
 }
@@ -41,7 +41,7 @@ export const arrMax = arr => {
  * @param {Array} arr 数组
  */
 export const arrSum = arr => {
-  arr.reduce(function(prev, cur) {
+  return arr.reduce((prev, cur)=> {
     return prev + cur
   }, 0)
 }
@@ -56,7 +56,7 @@ export const arrObjSum = (obj, key) => {
 }
 
 /**
- * 数组合并
+ * 数组合并,目前合并一维
  * @param {Array} arrOne 数组
  * @param {Array} arrTwo 数组
  */
@@ -67,14 +67,14 @@ export const arrConcat = (arrOne, arrTwo) => {
 /**
  * 数组是否包含某值
  * @param {Array} arr 数组
- * @param {} data 值
+ * @param {}  value 值,目前只支持 String,Number,Boolean
  */
-export const arrIncludeValue = (arr, data) => {
-  return arr.includes(data)
+export const arrIncludeValue = (arr,  value) => {
+  return arr.includes( value)
 }
 
 /**
- * 数组并集
+ * 数组并集,只支持一维数组
  * @param {Array} arrOne
  * @param {Array} arrTwo
  */
@@ -83,19 +83,19 @@ export const arrAndSet = (arrOne, arrTwo) => {
 }
 
 /**
- * 数组并集
+ * 数组交集,只支持一维数组
  * @param {Array} arrOne
  * @param {Array} arrTwo
- * eg: [1, 2, 3] [2, 4, 5] 差集为[1,3,4,5]
  */
 export const arrIntersection = (arrOne, arrTwo) => {
   return arrOne.filter(v => arrTwo.includes(v))
 }
 
 /**
- * 数组差集
+ * 数组差集,只支持一维数组
  * @param {Array} arrOne
  * @param {Array} arrTwo
+ * eg: [1, 2, 3] [2, 4, 5] 差集为[1,3,4,5]
  */
 export const arrDifference = (arrOne, arrTwo) => {
   return arrOne.concat(arrTwo).filter(v => !arrOne.includes(v) || !arrTwo.includes(v))
@@ -105,9 +105,13 @@ export const arrDifference = (arrOne, arrTwo) => {
  * 两个数组合并成一个对象数组,考虑到复杂度,所以目前支持两个一维数组
  * @param {Array} arrOne
  * @param {Array} arrTwo
- * @param {oneKey} oneKey
+ * @param {oneKey} oneKey 选填,如果两个都未传,直接以 arrOne 的值作为 key,arrTwo 作为 value
  * @param {twoKey} twoKey
  */
 export const arrTwoToArrObj = (arrOne, arrTwo, oneKey, twoKey) => {
-  return arrOne.map((oneKey, i) => ({ oneKey, twoKey: arrTwo[i] }))
+  if(!oneKey&&!twoKey){
+    return arrOne.map((oneKey, i) => ({ [oneKey]:arrTwo[i] }))
+  }else{
+    return arrOne.map((oneKey, i) => ({ oneKey, twoKey: arrTwo[i] }))
+  }
 }

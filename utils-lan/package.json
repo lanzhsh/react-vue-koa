@@ -1,0 +1,22 @@
+{
+  "name": "utils-lan",
+  "version": "1.1.0",
+  "description": "Utility class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lanzhsh/react-vue-koa/tree/master/utils-lan"
+  },
+  "keywords": [
+    "utils",
+    "tools"
+  ],
+  "author": "lanzhsh",
+  "license": "ISC",
+  "__npminstall_done": "Sat Nov 23 2019 15:55:33 GMT+0800 (GMT+08:00)",
+  "_from": "utils-lan@1.1.0",
+  "_resolved": "https://registry.npm.taobao.org/utils-lan/download/utils-lan-1.1.0.tgz"
+}
