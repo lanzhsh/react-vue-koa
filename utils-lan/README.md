@@ -1,3 +1,10 @@
+## 使用
+```
+npm i -S utils-lan  
+import utils from 'utils-lan'  
+console.log(utils.arrJudge(['1','2']))
+```
+
 ## arr.js 12
 备注:目前数组相关工具类只支持一维数组  
 
