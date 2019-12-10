@@ -14,7 +14,7 @@ export const localStorageSet = (key, value) => {
  * @param {String} key  属性
  */
 export const localStorageGet = (key) => {
-  return JSON.parse(localStorage.getItem(key))
+  return localStorage.getItem(key)
 }
 
 /**
@@ -54,7 +54,7 @@ export const sessionStorageSet = (key, value) => {
  * @param {String} key  属性
  */
 export const sessionStorageGet = (key) => {
-  return JSON.parse(sessionStorage.getItem(key))
+  return sessionStorage.getItem(key)
 }
 
 /**
