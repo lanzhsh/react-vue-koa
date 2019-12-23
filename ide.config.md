@@ -103,14 +103,17 @@
   7. GitLens — Git supercharged 【代码每一行提交记录】
   8. HTML CSS Support
   9. HTML Snippets
-  10. JavaScript (ES6) code snippets
-  11. Material Theme 【主题】
-  12. Prettier - Code formatter 【代码美化】
-  13. Sass
-  14. TsLint
-  15. Vetur
-  16. vscode-icons
-  17. Vue 2 Snippets
+  10. Import Cost 【显示导入包的大小】
+  11. JavaScript (ES6) code snippets
+  12. Live Server 【服务器访问代码】
+  13. Material Theme 【主题】
+  14. Polacode 【代码导出为图片,博客神器】
+  15. Prettier - Code formatter 【代码美化】
+  16. Sass
+  17. TsLint
+  18. Vetur
+  19. vscode-icons
+  20. Vue 2 Snippets
 
 
 #### Git Moji 提交
