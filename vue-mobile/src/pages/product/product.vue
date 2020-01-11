@@ -13,6 +13,9 @@
         @exchange="onExchange"
       />
     </van-popup>
+
+    <van-button @click="onComfirmClick">确认</van-button>
+    <van-button @click="onInfoClick">提示</van-button>
   </div>
 </template>
 
@@ -58,6 +61,20 @@ export default {
     },
     onExchange(code) {
       this.coupons.push(coupon)
+    },
+    onComfirmClick() {
+      this.$confirm({
+        confirmTxt: '确定',
+        cancelTxt: '取消',
+        onConfirm: () => {
+          console.log('确认执行')
+        }
+      })
+    },
+    onInfoClick() {
+      this.$messageBox({
+        diaData: ['这是提示']
+      })
     }
   }
 }
