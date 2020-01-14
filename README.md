@@ -1,6 +1,6 @@
 ### 内容
 ```
-Vue，React，微信小程序，快应用，TS 和 Koa 一把梭。
+Vue，React，微信小程序，快应用，TS , Koa和JS 一把梭。
 ```
 ## star
 ```
@@ -14,6 +14,7 @@ mini-program-template：小程序 template
 react-koa：react+koa 的全栈demo
 react-mobile：react 的移动端 demo
 dva-umi-template：dva和umi 的 pc端 template
+js:原生 js 分析源码
 react-pc-template：react 的 pc端 template
 react-pc-skill：react 的 pc端技巧整理
 vue-demo：vue 的 pc 端 demo
