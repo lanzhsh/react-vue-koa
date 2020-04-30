@@ -18,7 +18,7 @@
     "cos-js-sdk-v5": "^0.5.5",
     "echarts": "^4.1.0",
     "element-ui": "^2.4.0",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "querystring": "^0.2.0",
     "vue": "^2.5.2",
     "vue-multiple-check": "^1.0.4",
