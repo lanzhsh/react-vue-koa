@@ -15,7 +15,7 @@
     "axios": "^0.18.1",
     "echarts": "^4.1.0",
     "element-ui": "^2.4.0",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "querystring": "^0.2.0",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.1",
