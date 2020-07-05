@@ -7,9 +7,6 @@
 
 # 1.Vue和React源码区别
 ## 1.1 Vue源码
-来张Vue源码编译过程图
-![](https://user-gold-cdn.xitu.io/2020/6/26/172eec4c38c54c96?w=1079&h=544&f=png&s=57314)  
-图片来源：[分析Vue源码实现](https://juejin.im/post/5adead636fb9a07aaf34d794)
 ### 1.1.1 挂载
 初始化$mounted会挂载组件,不存在 render 函数时需要编译(compile);
 
@@ -66,9 +63,6 @@ diff 算法对比差异和调用 update更新视图：
 5.createElm实质是遍历虚拟 dom，逆向解析成真实 dom；    
 
 ## 1.2 React 源码
-来张React源码编译过程图
-![React源码导图](https://user-gold-cdn.xitu.io/2020/6/26/172eeb528af1b162?w=2670&h=1430&f=png&s=299541)
-图片来源：[React源码解析](https://juejin.im/post/5a84682ef265da4e83266cc4)
 ### 1.2.1 React.Component
 1.原型上挂载了setState和forceUpdate方法;  
 2.提供props,context,refs 等属性;  
