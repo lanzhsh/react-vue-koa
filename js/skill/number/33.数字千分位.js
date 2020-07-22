@@ -9,3 +9,6 @@ thousandNum(1234); // "1,234"
 thousandNum(1234.00); // "1,234"
 thousandNum(0.1234); // "0.123,4"
 console.log(thousandNum(1234.5678)); // "1,234.567,8"
+
+console.log('1234567890'.replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+console.log((1234567890).toLocaleString())

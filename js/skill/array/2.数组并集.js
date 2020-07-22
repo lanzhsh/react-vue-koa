@@ -1,8 +1,9 @@
 // 普通数组
 // const arr1 = [1, 2, 3, 4, 5, 8, 9]
 // const arr2 = [5, 6, 7, 8, 9];
-// const result = arr1.concat(arr2.filter(v => !arr2.includes(v)))
-// console.log(result)
+// const result = arr1.concat(arr2.filter(v => !arr1.includes(v)))
+// console.log(result) //[1, 2, 3, 4,5, 8, 9]
+
 
 // 对象数组
 const arr1 = [{ name: 'name1', id: 1 }, { name: 'name2', id: 2 }, { name: 'name3', id: 3 }];

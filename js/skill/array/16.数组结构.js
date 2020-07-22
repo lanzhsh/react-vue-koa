@@ -1,5 +1,2 @@
-const param1 = 1;
-const param2 = 2;
-[param1, param2] = [param2, param1]; // 相当于交换了数组位置
-console.log(param1) // 2
-console.log(param2) // 1
+const arr = [1, 2]; //后面一定要加分号，因为不加解释器会认为在读数组
+[arr[1], arr[0]] = [arr[0], arr[1]]; // [2,1]
