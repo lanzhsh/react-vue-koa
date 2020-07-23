@@ -1,83 +1,149 @@
-const objDeepClone = obj => {
-  return clone(obj)
+const mapTag = '[object Map]';
+const setTag = '[object Set]';
+const arrayTag = '[object Array]';
+const objectTag = '[object Object]';
+const argsTag = '[object Arguments]';
+
+const boolTag = '[object Boolean]';
+const dateTag = '[object Date]';
+const numberTag = '[object Number]';
+const stringTag = '[object String]';
+const symbolTag = '[object Symbol]';
+const errorTag = '[object Error]';
+const regexpTag = '[object RegExp]';
+const funcTag = '[object Function]';
+
+const deepTag = [mapTag, setTag, arrayTag, objectTag, argsTag];
+
+
+function forEach(array, iteratee) {
+  let index = -1;
+  const length = array.length;
+  while (++index < length) {
+    iteratee(array[index], index);
+  }
+  return array;
 }
 
-const isType = (obj, type) => {
-  if (typeof obj !== 'object') return false;
-  // 判断数据类型的经典方法：
-  const typeString = Object.prototype.toString.call(obj);
-  let flag;
-  switch (type) {
-    case 'Array':
-      flag = typeString === '[object Array]';
-      break;
-    case 'Date':
-      flag = typeString === '[object Date]';
-      break;
-    case 'RegExp':
-      flag = typeString === '[object RegExp]';
-      break;
-    default:
-      flag = false;
-  }
-  return flag;
-};
+function isObject(target) {
+  const type = typeof target;
+  return target !== null && (type === 'object' || type === 'function');
+}
 
-/**
-* deep clone
-* @param  {[type]} parent object 需要进行克隆的对象
-* @return {[type]}        深克隆后的对象
-*/
-const clone = parent => {
-  // 维护两个储存循环引用的数组
-  const parents = []
-  const children = []
+function getType(target) {
+  return Object.prototype.toString.call(target);
+}
 
-  const _clone = parent => {
-    if (parent === null) return null
-    if (typeof parent !== 'object') return parent
+function getInit(target) {
+  const Ctor = target.constructor;
+  return new Ctor();
+}
 
-    let child, proto
+function cloneSymbol(targe) {
+  return Object(Symbol.prototype.valueOf.call(targe));
+}
 
-    if (isType(parent, 'Array')) {
-      // 对数组做特殊处理
-      child = []
-    } else if (isType(parent, 'RegExp')) {
-      // 对正则对象做特殊处理
-      child = new RegExp(parent.source, getRegExp(parent))
-      if (parent.lastIndex) child.lastIndex = parent.lastIndex
-    } else if (isType(parent, 'Date')) {
-      // 对Date对象做特殊处理
-      child = new Date(parent.getTime())
+function cloneReg(targe) {
+  const reFlags = /\w*$/;
+  const result = new targe.constructor(targe.source, reFlags.exec(targe));
+  result.lastIndex = targe.lastIndex;
+  return result;
+}
+
+function cloneFunction(func) {
+  const bodyReg = /(?<={)(.|\n)+(?=})/m;
+  const paramReg = /(?<=\().+(?=\)\s+{)/;
+  const funcString = func.toString();
+  if (func.prototype) {
+    const param = paramReg.exec(funcString);
+    const body = bodyReg.exec(funcString);
+    if (body) {
+      if (param) {
+        const paramArr = param[0].split(',');
+        return new Function(...paramArr, body[0]);
+      } else {
+        return new Function(body[0]);
+      }
     } else {
-      // 处理对象原型
-      proto = Object.getPrototypeOf(parent)
-      // 利用Object.create切断原型链
-      child = Object.create(proto)
+      return null;
     }
-
-    // 处理循环引用
-    const index = parents.indexOf(parent)
-
-    if (index !== -1) {
-      // 如果父数组存在本对象,说明之前已经被引用过,直接返回此对象
-      return children[index]
-    }
-    parents.push(parent)
-    children.push(child)
-
-    for (const i in parent) {
-      // 递归
-      child[i] = _clone(parent[i])
-    }
-
-    return child
+  } else {
+    return eval(funcString);
   }
-  return _clone(parent)
 }
 
-console.log(objDeepClone({
+function cloneOtherType(targe, type) {
+  const Ctor = targe.constructor;
+  switch (type) {
+    case boolTag:
+    case numberTag:
+    case stringTag:
+    case errorTag:
+    case dateTag:
+      return new Ctor(targe);
+    case regexpTag:
+      return cloneReg(targe);
+    case symbolTag:
+      return cloneSymbol(targe);
+    case funcTag:
+      return cloneFunction(targe);
+    default:
+      return null;
+  }
+}
+
+function clone(target, map = new WeakMap()) {
+
+  // 克隆原始类型
+  if (!isObject(target)) {
+    return target;
+  }
+
+  // 初始化
+  const type = getType(target);
+  let cloneTarget;
+  if (deepTag.includes(type)) {
+    cloneTarget = getInit(target, type);
+  } else {
+    return cloneOtherType(target, type);
+  }
+
+  // 防止循环引用
+  if (map.get(target)) {
+    return map.get(target);
+  }
+  map.set(target, cloneTarget);
+
+  // 克隆set
+  if (type === setTag) {
+    target.forEach(value => {
+      cloneTarget.add(clone(value, map));
+    });
+    return cloneTarget;
+  }
+
+  // 克隆map
+  if (type === mapTag) {
+    target.forEach((value, key) => {
+      cloneTarget.set(key, clone(value, map));
+    });
+    return cloneTarget;
+  }
+
+  // 克隆对象和数组
+  const keys = type === arrayTag ? undefined : Object.keys(target);
+  forEach(keys || target, (value, key) => {
+    if (keys) {
+      key = value;
+    }
+    cloneTarget[key] = clone(target[key], map);
+  });
+
+  return cloneTarget;
+}
+
+console.log(clone({
   name: '张三', age: 23,
   obj: { name: '李四', age: 46 },
   arr: [1, 2, 3]
-})) // { name: '张三', age: 23, obj: { name: '李四', age: 46 }, arr: [ 1, 2, 3 ] }
+}))
