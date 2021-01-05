@@ -71,7 +71,7 @@
     "@babel/core": "^7.3.4",
     "@babel/polyfill": "^7.2.5",
     "antd-mobile": "^2.2.9",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "core-js": "^2.6.9",
     "lodash": "^4.17.11",
     "qs": "^6.6.0",
